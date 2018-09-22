@@ -1,0 +1,32 @@
+h3{
+    color: blue;
+}
+#Global{
+    margin-left: 20px;
+    
+    
+}
+caption{
+    text-align: left;
+}
+body{
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table{
+    
+    border-collapse: collapse;
+    border-top: 1px solid gray;
+}
+.Borde{
+    border-bottom: 1px solid gray;
+}
+
+.num{
+    padding-left: 30px;
+}
+
+
+img{
+    width: 300px;
+}
