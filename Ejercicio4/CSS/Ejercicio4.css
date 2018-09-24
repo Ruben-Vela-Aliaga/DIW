@@ -16,10 +16,10 @@ body{
 table{
     
     border-collapse: collapse;
-    border-top: 1px solid gray;
+    border-top: 1px dotted gray;
 }
 .Borde{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px dotted gray;
 }
 
 .num{
