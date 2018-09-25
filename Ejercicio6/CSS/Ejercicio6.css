@@ -1,0 +1,32 @@
+a{
+    text-decoration: none;
+    color:rgb(17, 93, 192);
+}
+span{
+    font-size: 13px;
+    color: gray;
+}
+#Caja{
+    background-color:rgb(231, 231, 231); 
+    padding-top:30px ;
+    font-family: sans-serif;
+}
+.Pajaro{
+    width: 15px;
+    margin-left: 10%;
+}
+.fotos{
+    margin-bottom:80px;
+    width: 80px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius:40px;
+}
+.imagen{
+    padding-left:15px;
+}
+#Contenido{
+    padding-top: 12px;
+}
+.texto{
+    color: rgb(87, 86, 86);
+}
