@@ -1,13 +1,44 @@
+body{
+    font-family: "Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
+    color: #444;
+}
+
 img{
-    width: 400px;
+    width: 300px;
 }
 #Tabla1{
-    margin-left: 10%;
+margin-top: 5%;
+width: 70%;
+}
+#Tabla2{
     margin-top: 5%;
+    width: 80%;
+    background-color: #f5f5f5;
+}
+#Titulo1{
+    margin-left: 10%;
+}
+#Titulo2{
+    margin-left: 8%;
 }
 .Texto1{
-   padding-left: 15%;
+   padding-left: 10%;
+   line-height: 3em;
 }
-h3{
-    padding-left: 15%;
+
+.Texto2{
+    line-height: 3em;
+   margin-right: 80px;
+   margin-left: 8%;
+   
+}
+h2{
+    font-weight: 100;
+
+}
+
+
+.imagen2{
+padding-right: 30px;
+padding-top: 50px;
 }
