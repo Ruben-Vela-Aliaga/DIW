@@ -3,6 +3,11 @@
     padding-left:500;
   
 }
+#Contenido{
+ margin-right: 200px;
+ margin-left: 200px; 
+  align-content: center;
+}
 .texto{
   color:gray;
 }
