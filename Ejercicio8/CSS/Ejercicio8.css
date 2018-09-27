@@ -1,0 +1,20 @@
+img{
+    -moz-border-radius: 40px;
+    -webkit-border-radius:40px;
+    width: 80px;
+}
+#imagen{
+    float: left;
+    
+}
+#Caja{
+    margin-left: 10%;
+    margin-top: 10%;
+    font-family:sans-serif;
+    
+
+}
+h2{
+    text-align: left;
+    font-weight: 50;
+}
