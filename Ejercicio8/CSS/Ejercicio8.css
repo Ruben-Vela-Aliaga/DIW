@@ -1,20 +1,70 @@
-img{
+#imgPrincipal{
     -moz-border-radius: 40px;
     -webkit-border-radius:40px;
     width: 80px;
 }
-#imagen{
-    float: left;
+.iconos{
+    width: 20px;
+    margin-left: 10px;
+
     
 }
+#Etiqueta{
+     margin-left: 100px;
+}
+#imagen{
+    float: left;
+    margin-top: 10px;
+    
+}
+#leer{
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 600px;
+}
 #Caja{
-    margin-left: 10%;
+    margin-left: 7%;
+    margin-right: 2%;
     margin-top: 10%;
-    font-family:sans-serif;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    
     
 
+}
+#Texto{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 110px;
+    color: #515d64;
+    
+}
+#tags{
+    line-height: 25px;
+    font-size: 10px;
+    color: #5a7e93;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 20px;
 }
 h2{
     text-align: left;
     font-weight: 50;
+    color: rgb(33, 152, 199);
+    font-family: 'Open Sans', sans-serif;
+}
+#Titulo{
+margin-left: 110px;
+}
+.Head{
+    margin-left: 110px;
+    color: #767676;
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: rgb(46, 166, 214);
+}
+span{
+    margin-left: 50px;
 }
