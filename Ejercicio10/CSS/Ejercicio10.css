@@ -1,0 +1,38 @@
+.Titulo{
+    border:2px solid black;
+    margin-left: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+   
+
+}
+.Botones{
+    margin-top: 20px;
+    text-align: center;
+
+}
+.Boton1{
+    border:1px solid black;
+    background-color: red;
+    padding: 3px;
+
+}
+.Boton2{
+    border:1px solid black;
+    background:linear-gradient(50deg,blue 40%,red ,yellow 50%);
+  
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    
+}
+.Boton3{
+    border:1px solid black;
+    background:repeating-linear-gradient(320deg,gray 0% ,black 10%);
+      
+    padding: 5px;
+    margin-left: -5px;
+}
