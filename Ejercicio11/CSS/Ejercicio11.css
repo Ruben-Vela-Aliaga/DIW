@@ -1,0 +1,20 @@
+.Titulo{
+    border:1 px solid black;
+    padding: 10px;
+    margin: 10px;
+
+}
+.Iconos{
+    text-align:center;
+}
+.ShadowHunter,.ShadowHunterBETA,.Shaman,.Tauren,.TaurenChieftain,.Thrall{
+    width: 60px;
+    
+
+}
+.ShadowHunter:hover,.ShadowHunterBETA:hover,.Shaman:hover,.Tauren:hover,.TaurenChieftain:hover,.Thrall:hover{
+    width: 120px;
+}
+ul{
+    display: inline;
+}
