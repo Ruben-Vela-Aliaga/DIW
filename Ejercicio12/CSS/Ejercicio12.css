@@ -1,0 +1,39 @@
+div{
+    margin: 20px;
+text-align: end;
+}
+form{
+    float: left;
+    margin-left: 30%;
+    margin-top: 10%;
+    border:2px solid black;
+    width: 40%;
+    padding-right: 120px;
+}
+label{
+padding-right: 180px;
+float: left;
+font-size: 20px;
+}
+textarea{
+    width: 240px;
+}
+#email:focus,#password:focus,textarea:focus{ 
+    -moz-transform:scale(1.50);
+    -moz-transition:all 1s ease;
+    background: yellow;
+    border: 1px solid black;
+
+    
+    
+}
+#email:focus:invalid,#password:focus:invalid,textarea:focus:invalid{
+    background-color: red;
+}
+#email:blur:invalid,#password:blur:invalid,textarea:blur:invalid{
+    background-color: red;
+    border:1px solid red;
+}
+#email:focus label{
+font-size: 20px;
+}
