@@ -1,0 +1,33 @@
+#Titulo{
+    margin-top: 2%;
+}
+#nombreAlumno{
+    margin-right: 30%;
+}
+#nombreProfe{
+    margin-right: 32%;
+}
+#fechaIncidente{
+    margin-right: 80px;
+}
+#horaIncidente{
+    margin-right: 80px;
+}
+#LugarIncidente{
+
+}
+.checkBox{
+    float: left;
+}
+#nombreAlumno{
+    width: 350px;
+}
+.grupo{
+    padding: 30px;
+
+}
+form{
+    margin-top: 2%;
+
+    width: 70%;
+}
