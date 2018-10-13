@@ -1,6 +1,14 @@
 #Titulo{
     margin-top: 2%;
+    width: 50%;
+    border: 1px solid black;
 }
+#ExtraescolaresIni{
+  margin-right: 20%;
+}
+#ExtraescolaresFin{
+    margin-left: 20%;
+  }
 #nombreAlumno{
     margin-right: 30%;
 }
@@ -16,8 +24,41 @@
 #LugarIncidente{
 
 }
+.checkBoxD{
+    width: 65%;
+    text-align: left;
+    border: 2px solid black;
+    padding: 5px;
+    opacity: 0.5;
+    
+ 
+}
+img{
+    width: 20px;
+}
+.Articulo{
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+.Descipcion{
+    margin-top: 20px;
+    border-top: 2px solid black;
+    padding-top: 20px;
+}
+textarea{
+    width: 100%;
+}
+.tipificacion{
+    width: 20%;
+}
+.comentario{
+    width: 50%;
+}
+
 .checkBox{
-    float: left;
+text-align: left;
+
+
 }
 #nombreAlumno{
     width: 350px;
@@ -28,6 +69,7 @@
 }
 form{
     margin-top: 2%;
-
+    border: 1px solid black;
     width: 70%;
+    padding: 10px;
 }

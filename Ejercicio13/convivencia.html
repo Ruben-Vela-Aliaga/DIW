@@ -25,13 +25,13 @@
 
             <div class="grupo">
                 <label for="nombreAlumno">ALUMNE/A</label>
-                <input type="text" id="nombreAlumno">
+                <input type="text" id="nombreAlumno" placeholder="Nombre y Apellidos">
                 <label for="grupo">GRUP</label>
-                <input type="text" id="Grupo">
+                <input type="text" id="Grupo" placeholder="2ºDaw">
             </div>
             <div>
                 <label for="nombreProfe">PROFESSOR/A</label>
-                <input type="text" id="nombreProfe">
+                <input type="text" id="nombreProfe"  placeholder="Nombre y Apellidos">
                 <label for="horario">Horari d'atenció</label>
                 <input type="date" id="Horario">
                 <input type="time" id="Horario">
@@ -42,36 +42,84 @@
                     <label for="horaIncidente">Hora</label>
                     <input type="time" id="horaIncidente">
                     <label for="LugarIncidente">Lloc</label>
-                    <input type="text" id="LugarIncidente">
+                    <input type="text" id="LugarIncidente"  placeholder="Lugar del incidente">
                 </div>
-                <div>
+                <div class="Articulo">
                     <p>·En aplicació de l'article 37 del decret 39/08 sobre drets i deures, es comunica al pare/mare de l'alumne la imposició de la següent
                         mesura correctora:
                     </p>
                 </div>
-                <div class="checkBox">
-                    <div class="checkBox" >
-                    <input type="checkbox" >
+                <div>
+                    <div class="checkBox">
+                    <input type="checkbox" id="checkBox-1" >
                     <label>a)<span></span> compareixença davant del cap d'estudis/director</label>
                 </div>
-                <div>
-                        <input type="checkbox" >
-                        <label>b)<span></span> retirada d'aparrells electrónics (1)</label>
+                <div  class="checkBox">
+                        <input type="checkbox" id="checkBox-2">
+                        <label>b)<span></span> retirada d'aparrells electrònics (1)</label>
                 </div>
-          
-                       
-                        <div >
-                                <span class="dropdown-item-text"> Dropdown item text</span>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                              </div>
-         
-                <div>
-                        <input type="checkbox" >
-                        <label>b)<span></span> privació del temps de recreació els dies </label>
+                <div class="checkBox">
+                    <input type="checkbox"id="checkBox-3" >
+                    <label>c)<span></span> privació del temps de recreació els dies: <span></span> <input type="checkbox"  > Dilluns,  <input type="checkbox" > Dimarts,
+                        <input type="checkbox" > Dimecres, <input type="checkbox" > Dijous, <input type="checkbox" > Divendres</label>
+
+            </div>
+            <div class="checkBox">
+                <input type="checkbox" id="checkBox-4" >
+                <label>d)realització de les següents tasques educadores:</label>    
+                </div>     
+<div class="checkBoxD">
+        <input type="text" id="Tareas"  placeholder="Tasques">
+        <label>els dies  <span></span> <input type="checkbox"  > Dilluns,  <input type="checkbox" > Dimarts,
+            <input type="checkbox" > Dimecres, <input type="checkbox" > Dijous, <input type="checkbox" > Divendres</label>
+            <label> i amb l'horari <input type="time"></label>
+</div>
+<div class="checkBox">
+        <input type="checkbox" id="checkBox-5" >
+        <label>e) suspensió del dret a participar en activitats extraescolars i complementàries des de:</label>    
+        </div>   
+        <div class="checkBoxD">
+                <input type="date" id="ExtraescolaresIni"><label>fins a</label><input type="date" id="ExtraescolaresFin">
+              
+        </div>  
+        <div class="checkBox">
+                <input type="checkbox" id="checkBox-5" >
+                <label>e) suspensió del dret de l'assistència a les classes de:</label>    
+                </div>   
+                <div class="checkBoxD">
+                        <input type="text" id="Clases" placeholder="Assignaturas"><label>des de</label><input type="date" id="SuspensionIni">
+                        <label>fins a</label><input type="date" id="SupsensionFin">
+                      
+                </div>  
+                <div class="Descipcion">
                         
-                </div>
+                        <label>Descripció de l'incident:</label>  
+                        
+                       
+                        </div>  
+                        <div class="comentario">
+                                <textarea id="Incidente" placeholder="Descriu l'incident..."></textarea>  
+                              
+                        </div>  
+                        <div class="Descipcion">
+                        
+                                <img src="img/pregunta.png">  <label>Tipificació  de l'incident segons l'article 35:</label>  
+                                
+                               
+                                </div>  
+                                <div class="tipificacion">
+                                        <textarea id="Tipificació" placeholder="a,b,.."></textarea>  
+                                      
+                                </div>  
+
+</div>
+
+        
+           
+               
+            
+
+              
 
 
 
