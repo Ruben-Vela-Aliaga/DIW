@@ -2,6 +2,7 @@
     margin-top: 2%;
     width: 50%;
     border: 1px solid black;
+    background-color:lightblue;
 }
 #ExtraescolaresIni{
   margin-right: 20%;
@@ -31,25 +32,30 @@
    
  
 }
+
 #Enviar{
     margin-top: 5%;
     border: 2px solid black;
 }
-.enviar{
-  
-}
+
 
 img{
     width: 20px;
 }
 .Articulo{
-    border-top: 1px solid black;
+    margin-top: 20px;
+    border-top: 2px solid black;
     padding-top: 20px;
 }
 .Descipcion{
     margin-top: 20px;
-    border-top: 2px solid black;
+    
     padding-top: 20px;
+}
+.Descipcion1{
+    margin-top: 20px;
+  border-top: 2px solid black;
+    padding-top: 20px; 
 }
 textarea{
     width: 100%;
@@ -63,9 +69,18 @@ textarea{
 
 .checkBox{
 text-align: left;
-
-
 }
+input:focus{
+   background-color: azure;
+}
+.Lista{
+    font-size: 11px;
+    height: 150px;
+    width: 1050px;
+    overflow: auto
+   
+}
+
 #nombreAlumno{
     width: 350px;
 }
@@ -81,6 +96,7 @@ text-align: left;
     border: 1px solid black;
     width: 70%;
     padding: 10px;
+    background-color:lightblue;
 }
 #SuspensionIni{
     margin-right: 2%;
