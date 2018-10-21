@@ -34,12 +34,12 @@
                 <label for="nombreProfe">PROFESSOR/A</label>
                 <input name="nombreProfessor" type="text" id="nombreProfe" placeholder="Nombre y Apellidos">
                 <label for="horario">Horari d'atenció</label>
-                <input name="fechaAtencion" type="date" id="Horario">
-                <input name="horaAtencion" type="time" id="Horario">
+                <input name="fechaAtencion" type="date" id="fechaAtencion" value="">
+                <input name="horaAtencion" type="time" id="horaAtencion">
             </div>
             <div class="grupo">
                 <label for="fechaIncidente">Data de l'incident</label>
-                <input name="fechaIncidente" type="date" id="fechaIncidente">
+                <input name="fechaIncidente" type="date" id="fechaIncidente" value="" >
                 <label for="horaIncidente">Hora</label>
                 <input name="horaIncidente" type="time" id="horaIncidente">
                 <label for="LugarIncidente">Lloc</label>
@@ -55,13 +55,113 @@
                 <textarea rows="5" cols="80" name="DescripcionIncidente" id="Incidente" placeholder="Descriu l'incident..."></textarea>
 
             </div>
+            <div id=Documento>
+                <label>Elije el tipo de documento:</label>
+                <input type="radio" name="tipoDocumento" id="DocumentoLeve" checked onclick="MostrarLeve()"><label>Leve</label>
+                <input type="radio" id="DocumentoGrave" name="tipoDocumento" onclick="MostrarGreu()"><label>Greu</label>
+            </div>
+            <div id="Grave" class="QuitarGrave">
+                    <div class="Descipcion1">
+
+                             <p><b>Tipificació (3) de l'incident
+                                segons l'article 42:</b></p>
+        
+        
+                        </div>
+                    <div class="container">
+                            <div class="">
+                                
+        
+        
+        
+                                    <ul class="Lista">
+        
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1A" name="Tipificacion1A"/>
+                                            <label class="checkbox"><b> a.-</b> Els actes greus d'indisciplina i les injúries i ofenses contra membres de la comunitat educativa que sobrepassen
+                                            la incorrecció o la desconsideració previstes en el article 35</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1B" name="Tipificacion1B"/>
+                                            <label class="checkbox"> <b>b.-</b> L'agressió física o moral, les amenaces i coaccions i la discriminació greu a qualsevol membre de la comunitat educativa, així com la falta de respecte greu a la integritat i dignitat personal. </label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1C"name="Tipificacion1C"/>
+                                            <label class="checkbox">  <b>c.-</b>Les vexacions i humiliacions a qualsevol membre de la comunitat escolar, particularment si tenen un comportament sexista o xenòfon, axi com les que es realitzen contra els membres més vulnerables. </label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1D"name="Tipificacion1D"/>
+                                            <label class="checkbox"> <b> d.-</b>Làssetjament escolar. </label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1E"name="Tipificacion1E"/>
+                                            <label class="checkbox"> <b>e.-</b>La suplantació de personalitat en actes de la vida docent.</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1F"name="Tipificacion1F"/>
+                                            <label class="checkbox"> <b> f.-</b> La falsificació, el deteriorament o la sustracció de documentació acadèmica. </label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1G" name="Tipificacion1G"/>
+                                            <label class="checkbox"> <b> g.-</b>Els danys greus causats en els locals, materials o documents del centre o ens els béns dels membres de la comunitat educativa. </label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1H" name="Tipificacion1H"/>
+                                            <label class="checkbox">  <b>h.-</b> Els actes injustificats que pertorben greument el normal desenvolupament de les activitats del centre. </label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1I" name="Tipificacion1I" />
+                                            <label class="checkbox"> <b>i.-</b> Les actuacions que puguen perjudicar perjudiquen greument la salut i la integritat personal dels membres de la comunitat educativa.</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1J"name="Tipificacion1J"/>
+                                            <label class="checkbox"> <b>j.-</b> La introducció en el centre d'objectes perillosos o substàncies perjudicials per a la salut i la integrutat personal dels membres de la comunitat educativa.</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1K" name="Tipificacion1K"/>
+                                            <label class="checkbox"> <b>k.-</b>Les conductes típificades com a contràries a les normes de convivència del centre educatiu si concorren circumstàncies de col·lectivitat o publicitat intencionada per qualsevol mitjá.</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1L" name="Tipificacion1L"/>
+                                            <label class="checkbox"> <b>l.-</b>La incitació o l'estimul a cometre una falta que afecte greument la convivència en el centre.</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1M" name="Tipificacion1M"/>
+                                            <label class="checkbox"> <b>m.-</b>La negativa reiterada al compliment de les mesures disciplinàries adoptades davant de faltes que afecten greument a la convivència en el centre.</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1N" name="Tipificacion1N"/>
+                                            <label class="checkbox"> <b>n.-</b>La negativa reiterada al compliment de les mesures disciplinàries adoptades davant de faltes que afecten greument a la convivència en el centre.</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1O" name="Tipificacion1O"/>
+                                            <label class="checkbox"> <b>o.-</b> L'accés indegut o sense autorització a fitxers i servidors del centre.</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" id="Tipificacion1P" name="Tipificacion1P"/>
+                                            <label class="checkbox"> <b>p.-</b>Actes atemptatoris respecte al projecte educatiu, així com al caràcter propi del centre.</label>
+                                        </li>
+                                       
+        
+        
+        
+                                    </ul>
+        
+                                
+                            </div>
+                        </div>
+                       
+
+
+            </div>
+            <div id="Leve">
             <div class="Articulo">
                 <p>·En aplicació de l'article 37 del decret 39/08 sobre drets i deures, es comunica al pare/mare de
                     l'alumne la imposició de la següent
                     mesura correctora:
                 </p>
             </div>
-            <div>
+           
                 <div class="checkBox">
                     <input name="checkboxA" type="checkbox" id="checkBox-1">
                     <label>a)<span></span> compareixença davant del cap d'estudis/director</label>
@@ -95,7 +195,7 @@
                     <label>e) suspensió del dret a participar en activitats extraescolars i complementàries des de:</label>
                 </div>
                 <div class="checkBoxD">
-                    <input name="ExtraescolaresIni" type="date" id="ExtraescolaresIni"><label>fins a</label><input name="ExtraescolaresFin"
+                    <input name="ExtraescolaresIni" type="date" id="ExtraescolaresIni" value=""><label>fins a</label><input name="ExtraescolaresFin"
                         type="date" id="ExtraescolaresFin">
 
                 </div>
@@ -105,15 +205,15 @@
                 </div>
                 <div class="checkBoxD">
                     <input name="Asignaturas" type="text" id="Clases" placeholder="Assignaturas"><label>des de</label><input
-                        name="SuspensionIni" type="date" id="SuspensionIni">
+                        name="SuspensionIni" type="date" value="" id="SuspensionIni">
                     <label>fins a</label><input name="SupsensionFin" type="date" id="SupsensionFin">
 
                 </div>
 
                 <div class="Descipcion1">
 
-                    <img class="Ayuda" src="img/pregunta.png" onclick="Ayuda()"> <label>Tipificació de l'incident
-                        segons l'article 35:</label>
+                    <p><b>Tipificació de l'incident
+                        segons l'article 35:</b></p>
 
 
                 </div>
@@ -126,95 +226,95 @@
                             <ul class="Lista">
 
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox"  id="TipificacionA" name="TipificacionA"/>
                                     <label class="checkbox"><b> a.-</b> Les faltes de puntualitat injustificades. </label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox"id="TipificacionB" name="TipificacionB"/>
                                     <label class="checkbox"> <b>b.-</b> Les faltes d'assistència injustificades. </label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionC"  name="TipificacionC"/>
                                     <label class="checkbox">  <b>c.-</b> Els actes que alteren el normal desemvolupament de les
                                         activitats del centre educatiu, especialment els que alteren el normal
                                         desemvolupament de les classes. </label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionD"  name="TipificacionD"/>
                                     <label class="checkbox"> <b> d.-</b>Els actes d'indisciplina. </label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionE"  name="TipificacionE"/>
                                     <label class="checkbox"> <b>e.-</b> Els actes d'incorrecció o desconsideració, les injúries
                                         i les ofenses contra el membres de la comunitat educativa.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionF " name="TipificacionF"/>
                                     <label class="checkbox"> <b> f.-</b> El furt o deteriorament intencionat
                                         d'inmobles,materials,documentació o recursos del centre. </label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionG"  name="TipificacionG"/>
                                     <label class="checkbox"> <b> g.-</b> El furt o deteriorament intencionat dels béns o
                                         materials dels membres de la comunitat educativa </label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionH"  name="TipificacionH"/>
                                     <label class="checkbox">  <b>h.-</b> Les accions que puguen ser perjudicials per a la
                                         integritat i la salut dels membres de la comunitat educativa. </label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionI"  name="TipificacionI"/>
                                     <label class="checkbox"> <b>i.-</b> La negativa sisteàtica a portar el material necessari
                                         per al desenvolupament del procés d'ensenyament-aprenentatge.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionJ"  name="TipificacionJ"/>
                                     <label class="checkbox"> <b>j.-</b> La negativa a traslladar la informació facilitada als
                                         pares, mares, tutors, o tutores per part del centre i viceversa.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionK"  name="TipificacionK"/>
                                     <label class="checkbox"> <b>k.-</b> L'alteració o manipulació de la documentació facilitada
                                         als ares, mares, tutors o tutores per part del centre.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionL"  name="TipificacionL"/>
                                     <label class="checkbox"> <b>l.-</b> La suplantació de la personalitat dels membres de la
                                         comunitat escolar.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionM"  name="TipificacionM"/>
                                     <label class="checkbox"> <b>m.-</b> La utilizació inadequada de les tecnologies de la
                                         informació i comunicació durant les activitats que es realitzen en el centre
                                         educatiu.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionN"  name="TipificacionN"/>
                                     <label class="checkbox"> <b>n.-</b> L'us de telèfons mòbils, aparells de so i altres
                                         aparells electrònics aliens al procés d'ensenyament-aprenentatge. Durant les
                                         activitats que es realitzen en el centre educatiu.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionO"  name="TipificacionO"/>
                                     <label class="checkbox"> <b>o.-</b> Els actes que dificulten o impedisquen el dret i el
                                         deure de l'estudi dels seus companys i companyes.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionP"  name="TipificacionP"/>
                                     <label class="checkbox"> <b>p.-</b> La incitació o estimul a cometre una falta contrària a
                                         les normes de convivència.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionQ"  name="TipificacionQ"/>
                                     <label class="checkbox"> <b>q.-</b> La negativa al compliment de les mesures correctores adoptades davant de conductes contràries a les normes de convivència.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionR"  name="TipificacionR"/>
                                     <label class="checkbox"> <b>r.-</b>L'us inadequat de les infrastructures i béns o equips materials del centre.</label>
                                 </li>
                                 <li class="list-group-item">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="TipificacionS"  name="TipificacionS"/>
                                     <label class="checkbox"> <b>s.-</b> La desobediència en el compliment de les normes de carácter propi del centre i que estiguen incloses en el seu projecte educatiu.</label>
                                 </li>
 
@@ -225,10 +325,10 @@
                         
                     </div>
                 </div>
-                <input type="submit" id="Enviar">
+               
 
             </div>
-
+            <input type="submit" id="Enviar">
             </div>
 
         </form>
