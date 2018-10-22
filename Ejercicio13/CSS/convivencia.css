@@ -73,21 +73,25 @@ text-align: left;
 input:focus{
    background-color: azure;
 }
-.Lista{
-    font-size: 11px;
+#Lista{
+    font-size:11px;
     height: 150px;
-    width: 1150px;
-    overflow: auto
+    overflow: auto;
    
 }
-.Lista2{
-    font-size:11px;
-    height: 450px;
-    width: 1150px;
+.quitarD{
+    display: none;
+}
+.mostrarD{
+    visibility: visible;
+}
+#Lista2{
+    font-size:13px;
+    height: 150px;
     overflow: auto;
-    
-
-   
+}
+.Scroll {
+    text-align: left;
 }
 #nombreAlumno{
     width: 350px;
