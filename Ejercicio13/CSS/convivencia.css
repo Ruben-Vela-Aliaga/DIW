@@ -23,6 +23,7 @@
     margin-right: 80px;
 }
 
+
 .checkBoxD{
     width: 65%;
     text-align: left;
@@ -35,7 +36,7 @@
 
 #Enviar{
     margin-top: 5%;
-    border: 2px solid black;
+
 }
 
 
@@ -69,9 +70,6 @@ textarea{
 
 .checkBox{
 text-align: left;
-}
-input:focus{
-   background-color: azure;
 }
 #Lista{
     font-size:11px;
