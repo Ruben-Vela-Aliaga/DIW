@@ -25,7 +25,7 @@
             <h2>COMUNICACIÓ DE MESURES CORRECTORES</h2>
         </div>
 
-        <form onsubmit="return onSubmit(this)" id="Formulario">
+        <form method="POST" action="http://localhost:3000/faltas">
 
             <div class="grupo">
                 <label for="nombreAlumno">ALUMNE/A</label>
@@ -60,9 +60,9 @@
             </div>
             <div id=Documento>
                 <label><b>Elije el tipo de Falta:</b></label>
-                <input type="radio" name="tipoDocumento" id="DocumentoLeve" checked onclick="MostrarLeve()"> <label>
+                <input type="radio" name="tipoDocumento"for="tipo" id="DocumentoLeve" checked onclick="MostrarLeve()"> <label>
                     Leve </label>
-                <input type="radio" id="DocumentoGrave" name="tipoDocumento" onclick="MostrarGreu()"> <label> Greu
+                <input type="radio" id="DocumentoGrave" name="tipoDocumento" for="tipo"onclick="MostrarGreu()"> <label> Greu
                 </label>
             </div>
             <div id="Grave" class="QuitarGrave">
@@ -182,10 +182,10 @@
                 <div id="isCheckedD" class="quitarD">
                     <div class="checkBoxD">
                         <input name="Tareas" type="text" id="Tareas" placeholder="Tasques">
-                        <label>els dies <span></span> <input name="diasRealizacion" type="checkbox"> Dilluns, <input
-                                name="diasRealizacion" type="checkbox"> Dimarts,
-                            <input name="diasRealizacion" type="checkbox"> Dimecres, <input name="diasRealizacion" type="checkbox">
-                            Dijous, <input name="diasRealizacion" type="checkbox"> Divendres</label>
+                        <label>els dies <span></span> <input name="Lunes" type="checkbox"> Dilluns, <input
+                                name="Martes" type="checkbox"> Dimarts,
+                            <input name="Miercoles" type="checkbox"> Dimecres, <input name="Jueves" type="checkbox">
+                            Dijous, <input name="Viernes" type="checkbox"> Divendres</label>
                         <label> i amb l'horari <input name="horaRealizacion" type="time"></label>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
 
 
             </div>
-            <input type="submit" id="Enviar" value="Enviar" onclick="regargar()">
+            <input type="submit" id="Enviar" value="Enviar">
             </div>
 
         </form>

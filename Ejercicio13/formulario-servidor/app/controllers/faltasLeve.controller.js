@@ -21,13 +21,8 @@ exports.create = (req, res) => {
     horaIncidente:req.body.horaIncidente,
     lugarIncidente:req.body.lugarIncidente,
     DescripcionIncidente:req.body.DescripcionIncidente,
-    tipoDocumento:req.body.tipoDocumento,
-    checkboxA:req.body.checkboxA,
-    checkboxB:req.body.checkboxB,
-    checkboxC:req.body.checkboxC,
-    checkboxD:req.body.checkboxD,
-    checkboxE:req.body.checkboxE,
-    checkboxF:req.body.checkboxF,
+    tipoDocumentoLeve:req.body.tipoDocumentoLeve,
+    tipoDocumentoGrave:req.body.tipoDocumentoGrave,
     Tareas:req.body.Tareas,
     horaRealizacion:req.body.horaRealizacion,
     ExtraescolaresIni:req.body.ExtraescolaresIni,
@@ -57,23 +52,6 @@ exports.create = (req, res) => {
     TipificacionQ:req.body.TipificacionQ,
     TipificacionR:req.body.TipificacionR,
     TipificacionS:req.body.TipificacionS,
-    Tipificacion1A:req.body.Tipificacion1A,
-    Tipificacion1B:req.body.Tipificacion1B,
-    Tipificacion1C:req.body.Tipificacion1C,
-    Tipificacion1D:req.body.Tipificacion1D,
-    Tipificacion1E:req.body.Tipificacion1E,
-    Tipificacion1F:req.body.Tipificacion1F,
-    Tipificacion1G:req.body.Tipificacion1G,
-    Tipificacion1H:req.body.Tipificacion1H,
-    Tipificacion1I:req.body.Tipificacion1I,
-    Tipificacion1J:req.body.Tipificacion1J,
-    Tipificacion1K:req.body.Tipificacion1K,
-    Tipificacion1L:req.body.Tipificacion1L,
-    Tipificacion1M:req.body.Tipificacion1M,
-    Tipificacion1N:req.body.Tipificacion1N,
-    Tipificacion1Ñ:req.body.Tipificacion1Ñ,
-    Tipificacion1O:req.body.Tipificacion1O,
-    Tipificacion1P:req.body.Tipificacion1P,
     })
 
     faltas.save().then(data => {
@@ -92,32 +70,6 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
 
     Faltas.find().then(faltas => {
-        res.send(faltas);
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || " Algo fue mal mientras los capturabamos a todos"
-        });
-    });
-
-};
-
-// Obtener todas las faltas leves
-exports.findLeves = (req, res) => {
-
-    Faltas.find({tipoDocumento:{$in:req.body}}).then(faltas => {
-        res.message = "Leves";
-        res.send(faltas);
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || " Algo fue mal mientras los capturabamos a todos"
-        });
-    });
-
-};
-// Obtener todas las faltas Graves
-exports.findGraves = (req, res) => {
-
-    Faltas.find({tipoDocumento:{$in:req.body}}).then(faltas => {
         res.send(faltas);
     }).catch(err => {
         res.status(500).send({
@@ -164,7 +116,7 @@ exports.update = (req, res) => {
 
     // Find note and update it with the request body
     Faltas.findByIdAndUpdate(req.params.alumno, {
-        nombreAlumno:req.body.nombreAlumno,
+        nombreAlumno:req.body.nombreAlumno || "Ruben",
         grupoAlumno:req.body.grupoAlumno,
         nombreProfessor:req.body.nombreProfessor,
         fechaAtencion:req.body.fechaAtencion,
