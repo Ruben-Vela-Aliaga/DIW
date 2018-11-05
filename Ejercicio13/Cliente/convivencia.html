@@ -60,9 +60,9 @@
             </div>
             <div id=Documento>
                 <label><b>Elije el tipo de Falta:</b></label>
-                <input type="radio" name="tipoDocumento"for="tipo" id="DocumentoLeve" checked onclick="MostrarLeve()"> <label>
+                <input type="radio" name="documentoLeve"id="DocumentoLeve" checked onclick="MostrarLeve(),detectarRadioLeve()"> <label>
                     Leve </label>
-                <input type="radio" id="DocumentoGrave" name="tipoDocumento" for="tipo"onclick="MostrarGreu()"> <label> Greu
+                <input type="radio" id="DocumentoGrave" name="documentoLeve" onclick="MostrarGreu(),detectarRadioGrave()"> <label> Greu
                 </label>
             </div>
             <div id="Grave" class="QuitarGrave">
@@ -296,7 +296,7 @@
 
 
             </div>
-            <input type="submit" id="Enviar" value="Enviar">
+            <input type="submit" id="Enviar" value="Enviar" onclick="regargar()">
             </div>
 
         </form>

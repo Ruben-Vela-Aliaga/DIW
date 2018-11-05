@@ -11,6 +11,8 @@ const FaltasSchema = mongoose.Schema({
         lugarIncidente:String,
         DescripcionIncidente:String,
         tipoDocumento:String,
+        documentoGrave:String,
+        documentoLeve:String,
         checkboxA:String,
         checkboxB:String,
         checkboxC:String,

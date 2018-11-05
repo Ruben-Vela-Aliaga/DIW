@@ -22,6 +22,8 @@ exports.create = (req, res) => {
     lugarIncidente:req.body.lugarIncidente,
     DescripcionIncidente:req.body.DescripcionIncidente,
     tipoDocumento:req.body.tipoDocumento,
+    documentoGrave:req.body.documentoGrave,
+    documentoLeve:req.body.documentoLeve,
     checkboxA:req.body.checkboxA,
     checkboxB:req.body.checkboxB,
     checkboxC:req.body.checkboxC,
@@ -88,7 +90,7 @@ exports.create = (req, res) => {
 
 
 
-// Obtener todos los investigadores
+// Obtener todos las investigadores
 exports.findAll = (req, res) => {
 
     Faltas.find().then(faltas => {
@@ -103,9 +105,8 @@ exports.findAll = (req, res) => {
 
 // Obtener todas las faltas leves
 exports.findLeves = (req, res) => {
-
-    Faltas.find({tipoDocumento:{$in:req.body}}).then(faltas => {
-        res.message = "Leves";
+console.log({$in:req.body});
+    Faltas.find({documentoLeve:"on"}).then(faltas => {
         res.send(faltas);
     }).catch(err => {
         res.status(500).send({
@@ -116,8 +117,8 @@ exports.findLeves = (req, res) => {
 };
 // Obtener todas las faltas Graves
 exports.findGraves = (req, res) => {
-
-    Faltas.find({tipoDocumento:{$in:req.body}}).then(faltas => {
+    console.log({$in:req.body});
+    Faltas.find({documentoGrave:"on"}).then(faltas => {
         res.send(faltas);
     }).catch(err => {
         res.status(500).send({
@@ -174,6 +175,8 @@ exports.update = (req, res) => {
         lugarIncidente:req.body.lugarIncidente,
         DescripcionIncidente:req.body.DescripcionIncidente,
         tipoDocumento:req.body.tipoDocumento,
+        documentoGrave:req.body.documentoGrave,
+        documentoLeve:req.body.documentoLeve,
         Tareas:req.body.Tareas,
         horaRealizacion:req.body.horaRealizacion,
         ExtraescolaresIni:req.body.ExtraescolaresIni,

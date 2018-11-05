@@ -7,6 +7,44 @@ function onSubmit(form) {
   return false; //don't submit
 
 }
+function detectarRadioGrave(){
+
+  if(document.getElementById("DocumentoGrave").checked){
+    document.getElementById("DocumentoLeve").checked=0;
+    document.getElementById("DocumentoGrave").name="documentoGrave";
+    document.getElementById("DocumentoLeve").name="tipoDocumento";
+  }
+ 
+
+  /*
+  if(document.getElementById("DocumentoLeve").checked){
+    document.getElementById("DocumentoGrave").checked=0;
+    document.getElementById("DocumentoLeve").name="documentoLeve";
+  }else{
+    if( document.getElementById("DocumentoLeve").name=="documentoLeve"){
+      document.getElementById("DocumentoLeve").checked=0;
+      document.getElementById("DocumentoLeve").name="tipoDocumento";
+      document.getElementById("DocumentoGrave").name="documentoGrave";
+    }else{
+      
+      document.getElementById("DocumentoLeve").name="tipoDocumento";
+      document.getElementById("DocumentoGrave").name="documentoGrave";
+    }
+
+    
+  }
+  */
+}
+
+function detectarRadioLeve(){
+
+  if(document.getElementById("DocumentoLeve").checked){
+    document.getElementById("DocumentoGrave").checked=0;
+    document.getElementById("DocumentoLeve").name="documentoLeve";
+    document.getElementById("DocumentoGrave").name="tipoDocumento";
+  }
+}
+ 
 function regargar() {
 
   window.location.reload(true);
@@ -60,3 +98,4 @@ function inicio() {
   document.getElementById('DocumentoLeve').checked = 1;
 
 }
+  
