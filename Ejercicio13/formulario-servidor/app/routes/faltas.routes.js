@@ -13,11 +13,11 @@ module.exports = (app) => {
      app.get('/faltas/faltasGraves', faltas.findGraves);
 
     // Retrieve a single investigadores with investigadorId
-    app.get('/faltas/:alumno', faltas.findOne);
+    app.get('/faltas/:faltasId', faltas.findOne);
 
     // Update a investigadores with investigadorId
-    app.put('/faltas/:alumno', faltas.update);
+    app.put('/faltas/:faltasId', faltas.update);
 
     // Delete a investigadores with investigadorId
-    app.delete('/faltas/:alumno', faltas.delete);
+    app.delete('/faltas/:faltasId', faltas.delete);
 }

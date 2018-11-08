@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const app = express();
 
 // Utilizaremos body-parser para "parsear lo que nos pidan"
@@ -28,6 +29,10 @@ mongoose.connect(dbConfig.url,{
 app.get('/',(req,res)=>{
     res.json({"message":"Parte Backend de nuestro programa"});
 });
+// Paginas publicas (estaticas)
+app.use(express.static(path.join(__dirname, 'Cliente')));
+
+
 // Require Alumnos routes
 require('./app/routes/faltas.routes.js')(app);
 
