@@ -131,22 +131,22 @@ exports.findGraves = (req, res) => {
 
 // Obtener un investigador por Id
 exports.findOne = (req, res) => {
-    Faltas.findById(req.params.alumno)
+    Faltas.findById(req.params.faltasId)
         .then(faltas => {
             if (!faltas) {
                 return res.status(404).send({
-                    message: "Investigador NOT FOUND con ID " + req.params.alumno
+                    message: "Investigador NOT FOUND con ID " + req.params.faltasId
                 });
             }
             res.send(faltas);
         }).catch(err => {
             if (err.kind === 'ObjectId') {
                 return res.status(404).send({
-                    message: "Investigador no encontrado con ese id :" + req.params.alumno
+                    message: "Investigador no encontrado con ese id :" + req.params.faltasId
                 });
             }
             return res.status(500).send({
-                message: "Tenemos NOSOTROS problemas con ese id :" + req.params.alumno
+                message: "Tenemos NOSOTROS problemas con ese id :" + req.params.faltasId
             });
         });
 };
@@ -164,7 +164,7 @@ exports.update = (req, res) => {
     }
 
     // Find note and update it with the request body
-    Faltas.findByIdAndUpdate(req.params.alumno, {
+    Faltas.findByIdAndUpdate(req.params.faltasId, {
         nombreAlumno:req.body.nombreAlumno,
         grupoAlumno:req.body.grupoAlumno,
         nombreProfessor:req.body.nombreProfessor,
@@ -209,40 +209,40 @@ exports.update = (req, res) => {
         .then(faltas => {
             if (!faltas) {
                 return res.status(404).send({
-                    message: "Investigador not found with id " + req.params.alumno
+                    message: "Investigador not found with id " + req.params.faltasId
                 });
             }
             res.send(faltas);
         }).catch(err => {
             if (err.kind === 'ObjectId') {
                 return res.status(404).send({
-                    message: "Investigador not found with id " + req.params.alumno
+                    message: "Investigador not found with id " + req.params.faltasId
                 });
             }
             return res.status(500).send({
-                message: "Error updating Investigador with id " + req.params.alumno
+                message: "Error updating Investigador with id " + req.params.faltasId
             });
         });
 };
 
 // Borrar un investigador 
 exports.delete = (req, res) => {
-    Faltas.findByIdAndRemove(req.params.alumno)
+    Faltas.findByIdAndRemove(req.params.faltasId)
         .then(faltas => {
             if (!faltas) {
                 return res.status(404).send({
-                    message: "Investigador no encontrado " + req.params.alumno
+                    message: "Investigador no encontrado " + req.params.faltasId
                 });
             }
             res.send({ message: "Cthulhu ha vencido !" });
         }).catch(err => {
             if (err.kind === 'ObjectId' || err.name === 'NotFound') {
                 return res.status(404).send({
-                    message: "Investigador not found with id " + req.params.alumno
+                    message: "Investigador not found with id " + req.params.faltasId
                 });
             }
             return res.status(500).send({
-                message: "No podemos matar a ese Investigador with id " + req.params.alumno
+                message: "No podemos matar a ese Investigador with id " + req.params.faltasId
             });
         });
 };
