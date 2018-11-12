@@ -105,7 +105,6 @@ exports.findAll = (req, res) => {
 
 // Obtener todas las faltas leves
 exports.findLeves = (req, res) => {
-console.log({$in:req.body});
     Faltas.find({documentoLeve:"on"}).then(faltas => {
         res.send(faltas);
     }).catch(err => {
