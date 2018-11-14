@@ -17,6 +17,27 @@ $.getJSON( "http://localhost:3000/faltas/"+auxId, function( data ) {
 
 
 
+function deleteFalta(){
+ 
+  $.ajax({
+    type: "DELETE",
+    url: "http://localhost:3000/faltas/"+auxId,
+    data: "",
+    success: function(msg){
+        alert("Data Deleted: " + msg);
+      
+        
+    }
+   
+});
+
+
+
+}
+function cambiarHtml(){
+ document.getElementById("borrar").href="http://localhost:3000/listarLeves.html";
+}
+
 
 function Atras(){
   document.getElementById("Atras").href="http://localhost:3000/listarLeves.html";

@@ -13,7 +13,7 @@ $.getJSON( "http://localhost:3000/faltas/faltasLeves", function( data ) {
   }).appendTo( "#divLista" );
 });
 
-function Eliminar1(){
+function Eliminar(){
   for ( i =0 ;i<clave;i++){
     console.log(clave);
   document.getElementsByName(form).action="http://localhost:3000/faltas/"+document.getElementById(i).id;
