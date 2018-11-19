@@ -47,7 +47,9 @@ function detectarRadioLeve(){
  
 function regargar() {
 
-  window.location.reload(true);
+window.location="http://localhost:3000/menu.html";
+  //window.location.reload(true);
+
 }
 function MostrarGreu() {
 

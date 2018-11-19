@@ -79,7 +79,7 @@ exports.create = (req, res) => {
     })
 
     faltas.save().then(data => {
-        res.send(data);
+        res.redirect("menu.html");
         
     }).catch(err => {
         res.status(500).send({

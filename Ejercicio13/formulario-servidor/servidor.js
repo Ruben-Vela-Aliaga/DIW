@@ -25,13 +25,13 @@ mongoose.connect(dbConfig.url,{
         process.exit();
     });
 
-// Vamos a definir un "punto de inicio"
-app.get('/',(req,res)=>{
-    res.json({"message":"Parte Backend de nuestro programa"});
-});
 // Paginas publicas (estaticas)
 app.use(express.static(path.join(__dirname, 'Cliente')));
 
+// Vamos a definir un "punto de inicio"
+app.get('/',(req,res)=>{
+    res.sendfile('index.html', { root: __dirname + "/Cliente" } );
+});
 
 // Require Alumnos routes
 require('./app/routes/faltas.routes.js')(app);
