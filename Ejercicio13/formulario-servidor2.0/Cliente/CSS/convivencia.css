@@ -1,0 +1,129 @@
+#Titulo{
+    margin-top: 2%;
+    width: 50%;
+    border: 1px solid black;
+  
+}
+#ExtraescolaresIni{
+  margin-right: 20%;
+}
+#ExtraescolaresFin{
+    margin-left: 20%;
+  }
+#nombreAlumno{
+    margin-right: 30%;
+}
+#nombreProfe{
+    margin-right: 32%;
+}
+#fechaIncidente{
+    margin-right: 80px;
+}
+#horaIncidente{
+    margin-right: 80px;
+}
+
+
+.checkBoxD{
+    width: 65%;
+    text-align: left;
+    border: 2px solid black;
+    padding: 5px;
+   
+   
+ 
+}
+
+#Enviar{
+    margin-top: 5%;
+
+}
+
+
+img{
+    
+}
+.Articulo{
+    margin-top: 20px;
+    border-top: 2px solid black;
+    padding-top: 20px;
+}
+.Descipcion{
+    margin-top: 20px;
+    
+    padding-top: 20px;
+}
+.Descipcion1{
+    margin-top: 20px;
+  border-top: 2px solid black;
+    padding-top: 20px; 
+}
+textarea{
+    width: 100%;
+}
+.tipificacion{
+    width: 20%;
+}
+.comentario{
+    width: 50%;
+}
+
+.checkBox{
+text-align: left;
+}
+#Lista{
+    font-size:11px;
+    height: 150px;
+    overflow: auto;
+   
+}
+.quitarD{
+    display: none;
+}
+.mostrarD{
+    visibility: visible;
+}
+#Lista2{
+    font-size:13px;
+    height: 150px;
+    overflow: auto;
+}
+.Scroll {
+    text-align: left;
+}
+#nombreAlumno{
+    width: 350px;
+}
+.grupo{
+    padding: 30px;
+
+}
+#Clases{
+    margin-right: 2%;
+}
+#Formulario{
+    margin-top: 2%;
+    border: 1px solid black;
+    width: 70%;
+    padding: 10px;
+
+}
+#Documento{
+    margin-top: 25px;
+}
+.QuitarGrave{
+    display: none;
+}
+.MostrarGrave{
+    visibility: visible;
+}
+.QuitarLeve{
+    display: none;
+}
+#SuspensionIni{
+    margin-right: 2%;
+    margin-left: 2%;
+}
+#SupsensionFin{
+    margin-left: 2%;
+}
