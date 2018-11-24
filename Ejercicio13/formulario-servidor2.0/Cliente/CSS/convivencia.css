@@ -4,6 +4,17 @@
     border: 1px solid black;
   
 }
+
+center{
+ position: absolute;
+ width: 90%;
+ 
+ margin-top: 10px;
+ right:5%;
+    background-image: url("../img/fondo3.png");
+  
+
+}
 #ExtraescolaresIni{
   margin-right: 20%;
 }
@@ -11,10 +22,11 @@
     margin-left: 20%;
   }
 #nombreAlumno{
-    margin-right: 30%;
+    margin-right: 20%;
 }
 #nombreProfe{
-    margin-right: 32%;
+    margin-right: 10%;
+    width: 350px;
 }
 #fechaIncidente{
     margin-right: 80px;
@@ -39,10 +51,6 @@
 
 }
 
-
-img{
-    
-}
 .Articulo{
     margin-top: 20px;
     border-top: 2px solid black;
@@ -71,7 +79,11 @@ textarea{
 .checkBox{
 text-align: left;
 }
-#Lista{
+#Lista3{
+    border: 2px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     font-size:11px;
     height: 150px;
     overflow: auto;
@@ -83,7 +95,11 @@ text-align: left;
 .mostrarD{
     visibility: visible;
 }
-#Lista2{
+#Lista4{
+    border: 2px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     font-size:13px;
     height: 150px;
     overflow: auto;
@@ -95,7 +111,8 @@ text-align: left;
     width: 350px;
 }
 .grupo{
-    padding: 30px;
+    padding: 20px;
+    margin-right: 50px;
 
 }
 #Clases{

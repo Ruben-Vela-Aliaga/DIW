@@ -1,26 +1,210 @@
-
+@media screen and (max-width:640px) {
+    a{
+    
+   
+        color: black;
+        text-decoration: none;
+    }
+    #head{
+       
+        background-image: url("../img/fondo.jpg");
+    
+    }
+    .badge{
+        right: 0;
+        position: absolute;
+    }
+    .container2{
+        
+        
+    }
+    .container1{
+    
+       
+    
+    }
+    h1{
+        text-align: center;
+    }
+    .container-fluid{
+        width: 50%;
+        
+    }
+    .list-group-item{
+        background-color:rgb(94, 94, 94) ;
+      
+    }
+    #listaItem{
+        border-bottom: 2px solid black;
+    }
+    .dropdown:hover .dropdown-toggle{
+        color: white;
+    
+      
+    }
+    .dropdown:hover{
+       
+        background-color:#294461;
+        transform:scale(1.05);
+        transition:all 1s ease;
+        transition-timing-function: ease;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+    .lista:hover{
+        background-color:#294461;
+        transform:scale(1.05);
+        transition:all 1s ease;
+        transition-timing-function: ease;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+    .lista:hover a{
+        color: white;
+    
+        
+    
+    }
+    .palabra{
+        font-family: fantasy;
+    
+    }
+    #borrarFalta img:hover{
+      
+        transform:scale(1.2);
+        transition:all 1s ease;
+        transition-timing-function: ease;
+      
+    }
+    #borrarFalta img{
+      
+        
+        transition:all 1s ease;
+        transition-timing-function: ease;
+      
+    }
+    #Formulario{
+        position: absolute;
+        right: 0;
+    
+    }
+    .lista2{
+        border-top: 2px solid black;
+      
+    }
+    .lista2:hover a{
+        background-color:#294461;
+        
+        font-size: 35px;
+    }
+    .lista{
+        margin-right: 5px;
+       border: 2px solid black;
+        width: 25%;
+        background-color:#007bff;
+    }
+    .dropdown{
+    
+        border: 2px solid black;
+        width: 23%;
+        background-color:#007bff;
+    }
+    .nav{
+    text-align: center;   
+    }
+    
+    .navbar{
+        background-color: rgb(180, 175, 175)
+    }
+    .jumbotron{
+        background-color: grey;
+    }
+    body{
+        background-image: url("../img/fondo.jpg");
+        
+        
+       
+    }
+    .dropdown-menu{
+    background-color:#007bff;
+    border: 2px solid black;
+    
+    
+    }
+    .dropdown-item:hover{
+        background-color: #007bff;
+    
+    
+    }
+    #Menu{
+        text-align: right;
+    }
+    .btn-group{
+     
+       border: 2px solid blue;
+        
+    }
+    .btn-group:hover{
+        
+    }
+    a:hover{
+        color: white;
+       
+        text-decoration: none;
+    }
+    #logo{
+        width: 300px;
+    
+    }
+    .menu{
+        display:none;
+    }
+    .btn{
+    
+    
+        width: 24%;
+        text-decoration: none;
+    
+    }
+}
 a{
     
    
     color: black;
     text-decoration: none;
 }
-.container{
+#head{
     padding: 0;
-    background-image: url("../img/header.jpg");
+    padding-bottom: 20px;
+    background-image: url("../img/fondo.jpg");
 
+}
+.badge{
+    right: 0;
+    position: absolute;
 }
 .container2{
     border-top: 2px solid black;
     padding-top: 20px;
     margin-top: 20px;
+    background-image: url("../img/fondo4.jpg");
+    width: 90%;
+    position: absolute;
+    right: 5%;
     padding-bottom:  20px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     
 }
 .container1{
 padding-left: 20px;
     width: 100%;
-    
+    position: relative;
+    z-index: 1;
+    font-family: fantasy;
    
 
 }
@@ -32,7 +216,7 @@ h1{
     
 }
 .list-group-item{
-    background-color:rgb(216, 71, 71) ;
+    background-color:rgb(94, 94, 94) ;
   
 }
 #listaItem{
@@ -40,16 +224,55 @@ h1{
 }
 .dropdown:hover .dropdown-toggle{
     color: white;
+
+  
 }
 .dropdown:hover{
+   
     background-color:#294461;
+    transform:scale(1.05);
+    transition:all 1s ease;
+    transition-timing-function: ease;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .lista:hover{
     background-color:#294461;
+    transform:scale(1.05);
+    transition:all 1s ease;
+    transition-timing-function: ease;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .lista:hover a{
     color: white;
+
     
+
+}
+.palabra{
+    font-family: fantasy;
+
+}
+#borrarFalta img:hover{
+  
+    transform:scale(1.2);
+    transition:all 1s ease;
+    transition-timing-function: ease;
+  
+}
+#borrarFalta img{
+  
+    
+    transition:all 1s ease;
+    transition-timing-function: ease;
+  
+}
+#Formulario{
+    position: absolute;
+    right: 0;
 
 }
 .lista2{
@@ -58,9 +281,11 @@ h1{
 }
 .lista2:hover a{
     background-color:#294461;
-    color: white;
+    
+    font-size: 35px;
 }
 .lista{
+    margin-right: 5px;
    border: 2px solid black;
     width: 25%;
     background-color:#007bff;
@@ -83,6 +308,8 @@ text-align: center;
 }
 body{
     background-image: url("../img/fondo.jpg");
+    
+    
    
 }
 .dropdown-menu{

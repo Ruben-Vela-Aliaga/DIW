@@ -1,23 +1,29 @@
 var Delete="<span class='badge badge-danger'>Eliminada</span>";
-$.getJSON( "http://localhost:4000/faltas/faltasGraves", function( data ) {
+$.getJSON( "http://localhost:4000/faltas/faltasBorradas", function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
-	console.log(key);
-  if( val.Eliminada == true){
-    items.push( "<li id='" + key + "' class='list-group-item' > <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a>"+Delete+"</li>" );
-  }else{
-    items.push( "<li id='" + key + "' class='list-group-item' > <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></li>" );
-  }
+    if( val.Eliminada == true){
+      items.push( "<li id='" + key + "' class='list-group-item' > <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a>"+Delete+"</li>" );
+    }else{
+      items.push( "<li id='" + key + "' class='list-group-item' > <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></li>" );
+    }
+    
+  
+     
+      
+    
+  
+  
   });
+  
+
  
   $( "<ul/>", {
     "class": "list-group",
     html: items.join( "" )
   }).appendTo( "#divLista" );
 });
-function RedirigirHtml(){
-  document.getElementById("leves").href="http://localhost:4000/listarLeves.html";
-}
+
 document.addEventListener("DOMContentLoaded",cargar);
 function cargar(){
   document.getElementById("crear").addEventListener("mouseover",cambiarColor);
@@ -27,7 +33,7 @@ function cargar(){
   document.getElementById("borrar").addEventListener("mouseout",restaurarColor);
   document.getElementById("editar").addEventListener("mouseout",restaurarColor);
 
-
+ 
 }
 function cambiarColor(){
   if(this.id=="crear"){

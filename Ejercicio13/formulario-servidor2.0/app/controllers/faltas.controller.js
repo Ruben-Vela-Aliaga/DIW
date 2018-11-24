@@ -1,3 +1,4 @@
+
 const Faltas = require('../models/faltas.model.js');
 
 // Crear y salvar
@@ -76,10 +77,12 @@ exports.create = (req, res) => {
     Tipificacion1Ñ:req.body.Tipificacion1Ñ,
     Tipificacion1O:req.body.Tipificacion1O,
     Tipificacion1P:req.body.Tipificacion1P,
+    Eliminada:false,
+    FechaEliminacion:"",
     })
 
     faltas.save().then(data => {
-        res.redirect("menu.html");
+        res.redirect("index.html");
         
     }).catch(err => {
         res.status(500).send({
@@ -118,6 +121,18 @@ exports.findLeves = (req, res) => {
 exports.findGraves = (req, res) => {
     console.log({$in:req.body});
     Faltas.find({documentoGrave:"on"}).then(faltas => {
+        res.send(faltas);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || " Algo fue mal mientras los capturabamos a todos"
+        });
+    });
+
+};
+//Obtener Todas las faltas Borradas
+exports.findBorradas = (req, res) => {
+    console.log({$in:req.body});
+    Faltas.find({Eliminada:true}).then(faltas => {
         res.send(faltas);
     }).catch(err => {
         res.status(500).send({
@@ -225,7 +240,7 @@ exports.update = (req, res) => {
 };
 
 // Borrar un investigador 
-exports.delete = (req, res) => {
+exports.deleteOriginal = (req, res) => {
     Faltas.findByIdAndRemove(req.params.faltasId)
         .then(faltas => {
             if (!faltas) {
@@ -244,4 +259,32 @@ exports.delete = (req, res) => {
                 message: "No podemos matar a ese Investigador with id " + req.params.faltasId
             });
         });
+    };
+        // Marca un investigador  como borrado
+       
+exports.delete = (req, res) => {
+    Faltas.findByIdAndUpdate(req.params.faltasId,{
+        Eliminada:true,
+        FechaEliminacion:"hoy",
+
+    })
+        .then(faltas => {
+            if (!faltas) {
+                return res.status(404).send({
+                    message: "Investigador no encontrado " + req.params.faltasId
+                });
+            }
+            res.send({ message: "Cthulhu ha vencido !" });
+        }).catch(err => {
+            if (err.kind === 'ObjectId' || err.name === 'NotFound') {
+                return res.status(404).send({
+                    message: "Investigador not found with id " + req.params.faltasId
+                });
+            }
+            return res.status(500).send({
+                message: "No podemos matar a ese Investigador with id " + req.params.faltasId
+            });
+        });
 };
+
+

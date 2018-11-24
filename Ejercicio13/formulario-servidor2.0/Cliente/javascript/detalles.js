@@ -1,10 +1,14 @@
 var auxId = location.search.substr(1).split("=")[1];
 var Leve;
 var Grave;
+var Eliminada;
 $.getJSON( "http://localhost:4000/faltas/"+auxId, function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
     items.push( "<li id='" + key + "' class='list-group-item' > "+key +":" +val + "</li>" );
+    if(key=="Eliminada"){
+      Eliminada=val;
+    }
     if(key=="documentoGrave"){
       Grave=val;
 
@@ -32,8 +36,8 @@ function deleteFalta(){
     url: "http://localhost:4000/faltas/"+auxId,
     data: "",
     success: function(msg){
-        alert("Data Deleted: " + msg);
-      
+       
+     
         
     }
    
@@ -42,18 +46,19 @@ function deleteFalta(){
 
 
 }
+
 function cambiarHtml(){
   if(Leve=="on"){
-    document.getElementById("borrar").href="http://localhost:4000/listarLeves.html";
+    document.getElementById("borrarFalta").href="http://localhost:4000/listarLeves.html";
   }
   if(Grave=="on"){
-    document.getElementById("borrar").href="http://localhost:4000/listarGraves.html";
+    document.getElementById("borrarFalta").href="http://localhost:4000/listarGraves.html";
   }
 
 }
 
 
 function Atras(){
-  document.getElementById("Atras").href="http://localhost:3000/listarLeves.html";
+  document.getElementById("Atras").href="http://localhost:4000/listarLeves.html";
 
 }

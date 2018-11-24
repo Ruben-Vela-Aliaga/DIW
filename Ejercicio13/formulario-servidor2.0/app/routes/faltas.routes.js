@@ -11,6 +11,8 @@ module.exports = (app) => {
     app.get('/faltas/faltasLeves', faltas.findLeves);
      // Encuentra todas faltas graves
      app.get('/faltas/faltasGraves', faltas.findGraves);
+     //Encuentra todas las faltas borradas
+     app.get('/faltas/faltasBorradas', faltas.findBorradas);
 
     // Retrieve a single investigadores with investigadorId
     app.get('/faltas/:faltasId', faltas.findOne);
