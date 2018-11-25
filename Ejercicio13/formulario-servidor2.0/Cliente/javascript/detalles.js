@@ -5,7 +5,7 @@ var Eliminada;
 $.getJSON( "http://localhost:4000/faltas/"+auxId, function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
-    items.push( "<li id='" + key + "' class='list-group-item' > "+key +":" +val + "</li>" );
+    items.push( "<li id='" + key + "' class='list-group-item' ><b> "+key +":</b> <input type='text' size='24%'name='"+key+"' value='"+val+"' disabled></li>" );
     if(key=="Eliminada"){
       Eliminada=val;
     }

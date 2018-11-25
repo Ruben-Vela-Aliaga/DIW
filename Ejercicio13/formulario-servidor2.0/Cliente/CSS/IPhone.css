@@ -1,0 +1,30 @@
+@media (max-width: 800px) {
+    .container1{
+            
+            left: 40;
+  
+        }
+    .lista{
+        width: 100%;
+        margin-right: 25%;
+        height: 5%;
+    }
+    .lista h3{
+        font-size: 20px;
+    }
+    .dropdown{
+    width: 75%;
+    height: 5%;
+    }
+    .dropdown h3{
+        font-size: 20px;
+        }
+        .lista2 h3{
+            font-size: 15px;
+        }
+        .lista2:hover a{
+            background-color:#294461;         
+            font-size: 20px;
+        }
+     
+  }

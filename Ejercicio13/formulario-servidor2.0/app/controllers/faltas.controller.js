@@ -119,7 +119,7 @@ exports.findLeves = (req, res) => {
 };
 // Obtener todas las faltas Graves
 exports.findGraves = (req, res) => {
-    console.log({$in:req.body});
+    
     Faltas.find({documentoGrave:"on"}).then(faltas => {
         res.send(faltas);
     }).catch(err => {
@@ -131,7 +131,7 @@ exports.findGraves = (req, res) => {
 };
 //Obtener Todas las faltas Borradas
 exports.findBorradas = (req, res) => {
-    console.log({$in:req.body});
+   
     Faltas.find({Eliminada:true}).then(faltas => {
         res.send(faltas);
     }).catch(err => {
