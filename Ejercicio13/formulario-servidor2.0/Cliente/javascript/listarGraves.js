@@ -1,5 +1,5 @@
 var Delete="<span class='badge badge-danger'>Eliminada</span>";
-$.getJSON( "http://localhost:4000/faltas/faltasGraves", function( data ) {
+$.getJSON( "faltas/faltasGraves", function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
 	console.log(key);
@@ -26,34 +26,6 @@ $.getJSON( "http://localhost:4000/faltas/faltasGraves", function( data ) {
   }).appendTo( "#divLista" );
 });
 function RedirigirHtml(){
-  document.getElementById("leves").href="http://localhost:4000/listarLeves.html";
+  document.getElementById("leves").href="listarLeves.html";
 }
 document.addEventListener("DOMContentLoaded",cargar);
-function cargar(){
-  document.getElementById("crear").addEventListener("mouseover",cambiarColor);
-  document.getElementById("borrar").addEventListener("mouseover",cambiarColor);
-  document.getElementById("editar").addEventListener("mouseover",cambiarColor);
-  document.getElementById("crear").addEventListener("mouseout",restaurarColor);
-  document.getElementById("borrar").addEventListener("mouseout",restaurarColor);
-  document.getElementById("editar").addEventListener("mouseout",restaurarColor);
-
-
-}
-function cambiarColor(){
-  if(this.id=="crear"){
-    document.getElementById(this.id).style.color="green";
-  }
-  
-  if(this.id=="editar"){
-    document.getElementById(this.id).style.color="yellow";
-}
-  
-  if(this.id=="borrar"){
-    document.getElementById(this.id).style.color="red";
-}
-  
-}
-function restaurarColor(){
-
-    document.getElementById(this.id).style.color="";
-  }

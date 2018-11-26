@@ -57,16 +57,7 @@ h1{
 
   
 }
-.dropdown:hover{
-   
-    background-color:#294461;
-    transform:scale(1.05);
-    transition:all 1s ease;
-    transition-timing-function: ease;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
+
 .lista:hover{
     background-color:#294461;
     transform:scale(1.05);
@@ -105,19 +96,35 @@ h1{
     right: 0;
 
 }
-.lista2{
-    border-top: 2px solid black;
-  
+.lista2:hover{
+    background-color:red;
+    transform:scale(1.05);
+    transition:all 1s ease;
+    transition-timing-function: ease;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .lista2:hover a{
-    background-color:#294461;
+    color: white;
+   
     
-    font-size: 35px;
+
 }
+.lista2{
+    margin-right: 5px;
+    border: 2px solid black;
+     width: 20%;
+     border-radius: 50%;
+ 
+     background-color:#007bff;
+}
+
 .lista{
     margin-right: 5px;
    border: 2px solid black;
-    width: 25%;
+    width: 17%;
+
     background-color:#007bff;
 }
 .dropdown{
@@ -142,12 +149,7 @@ body{
     
    
 }
-.dropdown-menu{
-background-color:#007bff;
-border: 2px solid black;
 
-
-}
 .dropdown-item:hover{
     background-color: #007bff;
 
@@ -161,9 +163,7 @@ border: 2px solid black;
    border: 2px solid blue;
     
 }
-.btn-group:hover{
-    
-}
+
 a:hover{
     color: white;
    

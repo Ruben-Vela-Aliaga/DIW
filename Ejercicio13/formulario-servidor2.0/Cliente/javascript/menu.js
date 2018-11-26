@@ -1,16 +1,16 @@
 function RedirigirHtmlLeve(){
-    document.getElementById("leves").href="http://localhost:4000/listarLeves.html";
+    document.getElementById("leves").href="listarLeves.html";
   }
   function RedirigirHtmlGrave(){
-    document.getElementById("graves").href="http://localhost:4000/listarGraves.html";
+    document.getElementById("graves").href="listarGraves.html";
   }
 
   function RedirigirHtmlTodas(){
-    document.getElementById("todas").href="http://localhost:4000/listarFaltas.html";
+    document.getElementById("todas").href="listarFaltas.html";
   }
 
 document.addEventListener("DOMContentLoaded",cargar);
-function cargar(){
+/*function cargar(){
   document.getElementById("crear").addEventListener("mouseover",cambiarColor);
   document.getElementById("borrar").addEventListener("mouseover",cambiarColor);
   document.getElementById("editar").addEventListener("mouseover",cambiarColor);
@@ -39,3 +39,4 @@ function restaurarColor(){
     document.getElementById(this.id).style.color="";
   }
 
+*/
