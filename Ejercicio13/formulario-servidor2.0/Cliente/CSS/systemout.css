@@ -1,5 +1,11 @@
 
+li img{
+    width: 30px;
+    position: absolute;
+    right: 20%;
+}
 a{
+
     
    
     color: black;
