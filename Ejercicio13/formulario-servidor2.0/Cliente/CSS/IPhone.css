@@ -1,45 +1,27 @@
 @media (max-width: 800px) {
-    .container1{
-           
-            left: 40;
-        position: fixed;
-        z-index: 1;
-        width: 100%;
-        }
-        .container2{
-            margin-top: 40%;
-        }
-      
-    .lista{
-        width: 65%;
-        height:  100%;
-        text-align: center;
-        margin-right: 5%;
-        height: 5%;
-        
-        border-radius: 50%;
+  
+      .ul-menu{
 
-      
-    }
-    .lista2{
-        width: 30%;
-        height:  10%;
+      }
+    .lista{
+        display: inline-table;
+      line-height: 60px;
+        margin-top: 10px;
+        background-color: #007bff;
         text-align: center;
-    }
-    .lista h3{
-        
-        font-size: 25px;
+       border-top-left-radius: 20%;
+       border-bottom-right-radius: 20%;
+       font-family: fantasy;
        
+       font-size: 25px;
+     
+       
+        width: 280px;
+        height: 75px;
+        border:  black 3px solid;
+        
     }
-    .dropdown{
-    width: 75%;
-    height: 5%;
-    }
-   
-        .lista2 h3{
-            font-size: 20px;
-           
-        }
+  
        
      
   }

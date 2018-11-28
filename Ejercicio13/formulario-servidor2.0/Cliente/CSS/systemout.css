@@ -72,7 +72,7 @@ table{
     
    
     width: 80%;
-   margin-left: 15%;
+   margin-left: 25%;
   
 }
 
@@ -142,15 +142,8 @@ table{
     
 
 }
-.lista2{
-    margin-right: 5px;
-    border: 2px solid black;
-     width: 20%;
-     border-radius: 50%;
- 
-     background-color:#007bff;
-}
 
+/*
 .lista{
     margin-right: 5px;
    border: 2px solid black;
@@ -158,12 +151,9 @@ table{
 
     background-color:#007bff;
 }
-.dropdown{
 
-    border: 2px solid black;
-    width: 23%;
-    background-color:#007bff;
-}
+*/
+
 .nav{
 text-align: center;   
 }
