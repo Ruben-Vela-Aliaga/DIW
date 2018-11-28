@@ -266,6 +266,7 @@ exports.delete = (req, res) => {
     Faltas.findByIdAndUpdate(req.params.faltasId,{
         Eliminada:true,
         FechaEliminacion:"hoy",
+    
 
     })
         .then(faltas => {

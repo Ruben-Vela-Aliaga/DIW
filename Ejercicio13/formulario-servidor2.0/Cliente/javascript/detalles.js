@@ -2,10 +2,11 @@ var auxId = location.search.substr(1).split("=")[1];
 var Leve;
 var Grave;
 var Eliminada;
+var cont=0;
 $.getJSON( "faltas/"+auxId, function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
-    items.push( "<li id='" + key + "' class='list-group-item' ><b> "+key +":</b> <input type='text' size='24%'name='"+key+"' value='"+val+"' disabled></li>" );
+    items.push( "<li id='" + key + "' class='list-group-item' ><b> "+key +":</b> <input id='"+key+cont+"'type='text' size='24%'name='"+key+"' value='"+val+"' disabled></li>" );
     if(key=="Eliminada"){
       Eliminada=val;
     }
@@ -16,6 +17,7 @@ $.getJSON( "faltas/"+auxId, function( data ) {
     if(key=="documentoLeve"){
       Leve=val;
     }
+    cont++;
   });
  
   $( "<ul/>", {
@@ -57,8 +59,3 @@ function cambiarHtml(){
 
 }
 
-
-function Atras(){
-  document.getElementById("Atras").href="listarLeves.html";
-
-}
