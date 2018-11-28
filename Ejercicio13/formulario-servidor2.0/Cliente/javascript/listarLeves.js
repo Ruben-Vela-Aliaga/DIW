@@ -1,5 +1,6 @@
 var Delete="<span class='badge badge-danger'>Eliminada</span>";
 var cabecera=false;
+
 $.getJSON( "faltas/faltasLeves", function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
@@ -44,7 +45,15 @@ $.getJSON( "faltas/faltasLeves", function( data ) {
 
 
 
+function menu(){
 
+  if( document.getElementById("menuNavegacion").style.display=="block"){
+    document.getElementById("menuNavegacion").style.display="none";
+  }else{
+    document.getElementById("menuNavegacion").style.display="block";
+  }
+
+}
 
 
 function ponerFechabien(fecha){
