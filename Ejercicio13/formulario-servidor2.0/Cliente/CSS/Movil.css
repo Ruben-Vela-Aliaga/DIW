@@ -62,7 +62,7 @@
     }
   
     /*FIN CSS HEAD*/
-    /*CSS HEAD BODY*/
+    /*CSS  BODY*/
     .container2{
        padding-left: 0;
         margin: 0;
@@ -102,6 +102,53 @@
     position: relative;
     
 }
-    
+ /* FIN CSS BODY*/   
+ /* CSS FORMULARIO*/  
+
+
+ center{
+  width: 100%; 
+  position: relative;
+  right: 0;
+  
+ }
+ #Titulo{
+    width: 100%;
+ }
+ form{
+     display: table-row;
+ }
+ .grupo{
+     padding: 0;
+     margin-right: 0;
+ }
+ #nombreAlumno{
    
+     width: 160px;
+ }
+ #Grupo{
+     width: 120px;
+ }
+ #nombreProfe{
+     width: 160px;
+ }
+ #horaIncidente{
+        margin-right: 0;
+ }
+ 
+ #LugarIncidente{
+     width: 150px;
+ }
+.comentario{
+    width:90% ;
+}
+.Articulo{
+    font-size: 14px;
+}
+label{
+    display: inline;
+}
+.row{
+    display:table-row
+}
 }

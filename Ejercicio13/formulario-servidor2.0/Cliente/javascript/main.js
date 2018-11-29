@@ -106,3 +106,12 @@ function cargar(){
 
 
 }
+function menu(){
+
+  if( document.getElementById("menuNavegacion").style.display=="block"){
+    document.getElementById("menuNavegacion").style.display="none";
+  }else{
+    document.getElementById("menuNavegacion").style.display="block";
+  }
+
+}
