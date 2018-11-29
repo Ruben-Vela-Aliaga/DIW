@@ -76,14 +76,5 @@ function Editar(img){
  //luego pongo dicha ruta en el enlace donde esta el evento onlclick
  document.getElementById("Editar"+abuelo.id).href=Enlace;
 
-
-
- 
- 
-
-
-
- 
-
 }
 
