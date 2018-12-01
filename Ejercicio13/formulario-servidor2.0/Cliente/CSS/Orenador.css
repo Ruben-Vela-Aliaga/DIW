@@ -1,72 +1,86 @@
 @media (max-width: 1200px) {
-   /*
-    #header{
-       width: 100%;
+    /*HEADER CSS*/
+   
+   .container{
+       display: unset;
    }
-   */
-   .container1{
-    position: absolute;
-       width: 100%;
-     
-  
-       left: 0;
+
+   #menuNavegacion{
+       display: flex;
+       text-align: center;
+    list-style: none;
+    height: 8%;
+    width: 110%;
+ 
+       
    }
-        .container2{
-          
-        }
-        .nav{
-            
-        }      
+   #MenuPrin{
+       border-radius: 50%;
+       background-color: darkgreen;
+   }
+   .lista{
+       font-size: 30px;
+       font-family: fantasy;
+    vertical-align: middle;
+       border:2px solid black;
+       margin-right: 5px;
+       border: 2px solid black;
+        width: 17%;
     
-    th{
-        text-align: center;
-        height: 50px;
-        width: 140px;
-        border:1px solid black;
-        background-color: darkcyan;
-    }
-    td{
-        text-align: center;
-        height: 50px;
-        width: 140px;
-        border:1px solid black;
-        background-color: rgb(206, 200, 192);
-    }
-    tr{
-        height: 50px;
-    }
-    table{
-        
-       
-        width: 80%;
-       margin-left: 15%;
-      
-    }
-    td img{
-        width: 20px;
-       
-     
-    }
-    /*
-    #divDetalles{
-        width: 80%;
-        margin-left: 10%;
-        }
-        */
-    .lista2{
-        width: 20%;
-    }
-    .lista h3{
-        font-size: 20px;
-       
-    }
-  
-        .lista2 h3{
-            font-size: 20px;
-        }
-        center{
-            margin-top: 25px;
-        }
-       
-     
+        background-color:#007bff;
+   }
+   
+  /*HEADER FORM*/
+ 
+  #menuNavegacion1{
+    display: flex;
+    text-align: center;
+ list-style: none;
+ height: 8%;
+ width: 110%;
+  }
+  /*CSS FORM*/
+   
+  #checkBox-3{
+      position: relative;
+      top: -20;
+  }
+  #Lista4{
+      display: inherit;
+  }
+  #Lista3{
+    display: inherit;
+}
+ /*CSS DETALLES*/
+  #divDetalles{
+      margin-left: 15%;
+  }
+table{
+    margin-left: 10%;
+}
+ #Formulario{
+     position: relative;
+     border: none;
+     width: 100%;
+     padding: 0;
+     margin-top: 4%;
+ 
+ }
+ .list-group{
+     display: inline-block;
+ }
+ form a img{
+     width: 60px;
+ }
+ th{
+     width: 200px;
+ }
+ tr{
+     height: 80px;
+    
+ }
+ .list-group-item{
+     display: table-row-group;
+    
+ }
   }

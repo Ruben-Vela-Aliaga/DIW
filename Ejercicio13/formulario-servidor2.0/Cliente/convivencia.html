@@ -6,7 +6,7 @@
     </title>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="https://moodle.ieslasenia.org/theme/image.php/boost/theme/1539709978/favicon" />
-    <link rel="stylesheet" type="text/css" href="CSS/convivencia.css">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -24,45 +24,50 @@
         
           </script>
   <!--CSS-->
+ 
   <link rel="stylesheet"  href="CSS/systemout.css">
-  <link rel="stylesheet" media="(max-width: 1200px)" href="CSS/Orenador.css" />
+ 
+  <link rel="stylesheet" media="(max-width: 980px)" href="CSS/Movil.css" />
+  <link rel="stylesheet" media="(min-width: 981px)" href="CSS/Orenador.css" />
+  
     </head>
   
     <body onload="inicio()">
+        <div class="container" id="head">
+            <h1><a href="./"><img src="img/Senia.png" width="100%"></h1></a>
+        
+        
+          
+            <div class="Menu2">
+                    <div id="icono1" onclick="menu()"></div>
+                <ul id ="menuNavegacion1"class="ul-menu">
+                        <li class="lista" id="MenuPrin">
+                                 <a id="crear" class="menuNav"href="convivencia.html">Crear</a>
+                            </li>
+        
+                    <li class="lista">
+                        <a class="home"  id="MenuSecund" href="listarLeves.html">Faltas Leves </a>
+                    </li>
+                    <li class="lista">
+                        <a class="home" href="listarGraves.html">Faltas Graves</a>
+                    </li>
+                    <li class="lista">
+                         <a class="home" href="listarFaltas.html">Todas las Faltas</a>
+                    </li>
+                    <li class="lista">
+                             <a class="home" href="listarBorradas.html">Faltas Borradas </a>
+                        </li>
+                   
+                </ul>
+        
+            </div>
+        
+        </div>
        
-            <div class="container" id="head">
-                    <h1><a href="./"><img src="img/Senia.png" width="50%"></h1></a>
-                
-                
-                
-                    <div class="container1">
-                        <ul class="nav nav-pills">
-                                <li class="lista2">
-                                        <h3> <a id="crear" href="convivencia.html">Crear</a></h3>
-                                    </li>
-                
-                            <li class="lista">
-                                <h3> <a href="listarLeves.html">Faltas Leves </a></h3>
-                            </li>
-                            <li class="lista">
-                                <h3> <a href="listarGraves.html">Faltas Graves</a></h3>
-                            </li>
-                            <li class="lista">
-                                <h3> <a href="listarFaltas.html">Todas las Faltas</a></h3>
-                            </li>
-                            <li class="lista">
-                                    <h3> <a href="listarBorradas.html">Faltas Borradas </a></h3>
-                                </li>
-                           
-                        </ul>
-                
-                    </div>
-                
-                </div>
-            
+          
          
          
-    <center>
+ <center>
 
         <div id="Titulo">
             <h2>COMUNICACIÓ DE MESURES CORRECTORES</h2>
@@ -76,7 +81,7 @@
                 <label for="grupo">GRUP</label>
                 <input name="grupoAlumno" type="text" id="Grupo" placeholder="2ºDaw">
             </div>
-            <div>
+            <div class="grupo">
                 <label for="nombreProfe">PROFESSOR/A</label>
                 <input name="nombreProfessor" type="text" id="nombreProfe" placeholder="Nombre y Apellidos">
                 <label for="horario">Horari d'atenció</label>
@@ -210,8 +215,8 @@
                 <div class="checkBox">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="checkboxC" type="checkbox" id="checkBox-3">
                     <label><b>c)</b><span></span> privació del temps de recreació els dies: <span></span> <input name="diasPrivacio"
-                            type="checkbox"> Dilluns, <input name="diasPrivacio" type="checkbox"> Dimarts,
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"> Dimecres, <input name="diasPrivacio" type="checkbox"> Dijous, <input
+                            type="checkbox"> Dilluns,<br>  &nbsp;&nbsp;&nbsp;<input name="diasPrivacio" type="checkbox"> Dimarts,
+<input type="checkbox"> Dimecres, <input name="diasPrivacio" type="checkbox"> Dijous, <input
                             name="diasPrivacio" type="checkbox"> Divendres</label>
 
                 </div>

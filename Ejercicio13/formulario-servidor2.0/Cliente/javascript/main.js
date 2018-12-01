@@ -100,9 +100,13 @@ function inicio() {
   document.getElementById('DocumentoLeve').checked = 1;
 
 }
-document.addEventListener("DOMContentLoaded",cargar);
-function cargar(){
+function menu(){
 
-
+  if( document.getElementById("menuNavegacion1").style.display=="block"){
+    document.getElementById("menuNavegacion1").style.display="none";
+  }else{
+    document.getElementById("menuNavegacion1").style.display="block";
+  }
 
 }
+
