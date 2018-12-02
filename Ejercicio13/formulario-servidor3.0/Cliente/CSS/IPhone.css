@@ -1,4 +1,4 @@
-@media (max-width: 800px) {
+@media (max-width: 800px){
   
   
     .lista{
@@ -22,4 +22,38 @@
   
        
      
+  }
+  @media (max-width: 800px) and  (orientation: landscape){
+    #menuNavegacion{
+display: inline-block;
+width: 100%;
+
+padding-left: 2px;
+
+    }
+    .Menu1{
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    #MenuPrin{
+      width: 80px;
+    }
+    .lista{
+   
+     display: inline-table;
+      line-height: 60px;
+      margin-top: 10px;
+      background-color: #007bff;
+      text-align: center;
+      border-top-left-radius: 20%;
+      border-bottom-right-radius: 20%;
+      font-family: fantasy;
+      margin-left: 30px;
+      font-size: 25px;
+       width: 0%;
+      height: 0%; 
+      vertical-align: middle;
+      border: black 3px solid;
+      
+  }
   }

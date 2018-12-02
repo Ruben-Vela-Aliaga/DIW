@@ -70,8 +70,8 @@
      
     }
     #divDetalles{
-        padding-right: 10px;
-    padding-left: 10px;
+        padding-right: 5px;
+    padding-left: 0px;
     }
     tr td,th {
         font-size: 10px;
@@ -101,13 +101,14 @@
 #Formulario{
     position: relative;
     border: none;
-    
+    padding: 0px;
 }
 /*CSS FORMULARIO*/
 center{
 left: 0;
-        width: 100%;
-        height: 176%;
+    display: flow-root;
+    width: 100%;
+     height: 197%;
 }
 #Titulo{
     width: 90%;
@@ -116,7 +117,7 @@ left: 0;
 #Titulo h2{
 font-size: 50px;
 }
-form{
+form #Formconvivencia{
     display: table-row;
   
 }
@@ -156,7 +157,7 @@ form{
    }
    textarea{
     font-size: 30px;
-       height: 80%;
+       height: 10%;
    }
    #Documento label{
        font-size: 50px;
@@ -252,4 +253,47 @@ background-color:#007bff;
       background-size: 100%;
       */
   }
+}
+@media (max-width: 980px) and  (orientation: landscape){
+    
+    #icono{
+        
+        right:50;
+        bottom: 200;
+    }
+    .container2{
+        padding-right: 20px;
+    }
+    #Formulario{
+width: 100%;
+    }
+    form #Formulario{
+display: block;
+    
+
+    }
+    center{
+        height: max-content;
+    }
+    .Menu2{
+        top:0;
+    }
+    #menuNavegacion1{
+        top: 140;
+        left: 0;
+        width: 400%;
+      
+    }
+    #menuNavegacion1 li a{
+font-size: 35px;
+    }
+    #menuNavegacion1 li{
+        height: 70px;
+    }
+    #icono1{
+        width: 100px;
+    }
+    textarea{
+        height: 100%;
+    }
 }
