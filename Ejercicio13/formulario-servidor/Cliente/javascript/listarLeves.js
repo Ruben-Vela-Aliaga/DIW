@@ -1,10 +1,14 @@
-
+var id;
 $.getJSON( "http://localhost:3000/faltas/faltasLeves", function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
  
-    items.push( "<li id='" + key + "' class='list-group-item' > <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></li>" );
-    
+    items.push( "<li id='" + key + "' class='list-group-item' > <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a> <span id='"+key+key+"' class='badge badge-warning'>Eliminado</span></li>" );
+if(val.Eliminada==true){
+id=key;
+
+
+}
   });
  
   $( "<ul/>", {
@@ -12,10 +16,3 @@ $.getJSON( "http://localhost:3000/faltas/faltasLeves", function( data ) {
     html: items.join( "" )
   }).appendTo( "#divLista" );
 });
-
-function Eliminar(){
-  for ( i =0 ;i<clave;i++){
-    console.log(clave);
-  document.getElementsByName(form).action="http://localhost:3000/faltas/"+document.getElementById(i).id;
-}
-}

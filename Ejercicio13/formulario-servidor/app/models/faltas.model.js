@@ -63,6 +63,8 @@ const FaltasSchema = mongoose.Schema({
         Tipificacion1Ñ:String,
         Tipificacion1O:String,
         Tipificacion1P:String,
+        Eliminada:Boolean,
+        FechaEliminacion:String,
         
 },{
     timestamps:true

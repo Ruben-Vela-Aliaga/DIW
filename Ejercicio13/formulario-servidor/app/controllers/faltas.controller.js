@@ -76,10 +76,12 @@ exports.create = (req, res) => {
     Tipificacion1Ñ:req.body.Tipificacion1Ñ,
     Tipificacion1O:req.body.Tipificacion1O,
     Tipificacion1P:req.body.Tipificacion1P,
+    Eliminada:false,
+    FechaEliminacion:'',
     })
 
     faltas.save().then(data => {
-        res.redirect("menu.html");
+        res.redirect("index.html");
         
     }).catch(err => {
         res.status(500).send({
@@ -225,7 +227,7 @@ exports.update = (req, res) => {
 };
 
 // Borrar un investigador 
-exports.delete = (req, res) => {
+exports.deleteorig = (req, res) => {
     Faltas.findByIdAndRemove(req.params.faltasId)
         .then(faltas => {
             if (!faltas) {
@@ -233,6 +235,32 @@ exports.delete = (req, res) => {
                     message: "Investigador no encontrado " + req.params.faltasId
                 });
             }
+            res.send({ message: "Cthulhu ha vencido !" });
+        }).catch(err => {
+            if (err.kind === 'ObjectId' || err.name === 'NotFound') {
+                return res.status(404).send({
+                    message: "Investigador not found with id " + req.params.faltasId
+                });
+            }
+            return res.status(500).send({
+                message: "No podemos matar a ese Investigador with id " + req.params.faltasId
+            });
+        });
+};
+
+
+exports.delete = (req, res) => {
+    Faltas.findByIdAndUpdate(req.params.faltasId,{
+        Eliminada:true,
+        FechaEliminacion:"Hoy",
+    })
+        .then(faltas => {
+            if (!faltas) {
+                return res.status(404).send({
+                    message: "Investigador no encontrado " + req.params.faltasId
+                });
+            }
+            console.log("Estamos actualizando");
             res.send({ message: "Cthulhu ha vencido !" });
         }).catch(err => {
             if (err.kind === 'ObjectId' || err.name === 'NotFound') {

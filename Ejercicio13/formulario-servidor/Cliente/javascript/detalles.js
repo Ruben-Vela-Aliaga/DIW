@@ -1,6 +1,7 @@
 var auxId = location.search.substr(1).split("=")[1];
 var Leve;
 var Grave;
+var id;
 $.getJSON( "http://localhost:3000/faltas/"+auxId, function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
@@ -42,7 +43,9 @@ function deleteFalta(){
 
 
 }
+
 function cambiarHtml(){
+
   if(Leve=="on"){
     document.getElementById("borrar").href="http://localhost:3000/listarLeves.html";
   }

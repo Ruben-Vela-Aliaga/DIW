@@ -5,6 +5,7 @@ a{
     text-decoration: none;
 }
 .container-fluid{
+
     width: 50%;
 }
 .list-group-item{
@@ -12,10 +13,23 @@ a{
   
 }
 .navbar{
-    background-color: rgb(180, 175, 175)
+    background-color:rgb(71, 70, 70);
+
+}
+.badge{
+}
+#borrar{
+    position: absolute;
+    right: 20%;
+    top: 57%;
 }
 .jumbotron{
-    background-color: grey;
+    background-color: rgb(55, 97, 107);
+   
+    width: 100%;
+}
+.container{
+  
 }
 body{
     background-color: bisque;
