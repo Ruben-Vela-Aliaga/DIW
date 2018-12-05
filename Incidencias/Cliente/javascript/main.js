@@ -1,3 +1,24 @@
+var auxId = location.search.substr(1).split("=")[1];
+var Leve;
+var Grave;
+var Eliminada;
+var cont=0;
+var cabecera=false;
+
+
+$.getJSON( "faltas/"+auxId, function( data ) {
+    console.log(data);
+    $.each( data, function( key, val ) {
+
+        if(data.hasOwnProperty(key))
+        $('input[name='+key+']').val(val);
+
+        if(data.hasOwnProperty(key))
+        $('textarea[name='+key+']').val(val);
+
+  });
+
+});
 
 
 function onSubmit(form) {
@@ -108,5 +129,7 @@ function menu(){
     document.getElementById("menuNavegacion1").style.display="block";
   }
 
+  
 }
+
 

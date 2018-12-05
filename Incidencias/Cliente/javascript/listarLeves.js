@@ -13,17 +13,17 @@ $.getJSON( "faltas/faltasLeves", function( data ) {
       if(val.nombreAlumno== ""){
         val.nombreAlumno="Sin nombre";
         
-      items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
+      items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='convivencia.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
     
     }else{
-      items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
+      items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='convivencia.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
     }
     }else{
       if(val.nombreAlumno== ""){
         val.nombreAlumno="Sin nombre";
-      items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td></td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
+      items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='convivencia.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td></td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
     }else{
-      items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td></td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
+      items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='convivencia.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td></td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
     }
   }
     
@@ -76,10 +76,10 @@ function Editar(img){
  //cojo el enlace
 
  var Enlace=hijoPadre[1].href;
- 
-
+ var clave=Enlace.split("=")[1];
  //luego pongo dicha ruta en el enlace donde esta el evento onlclick
  document.getElementById("Editar"+abuelo.id).href=Enlace;
-
+ 
+ 
 }
 

@@ -10,7 +10,7 @@ $.getJSON( "faltas/"+auxId, function( data ) {
     items.push( "<tr><th>Datos</th><th>Valor</th><th><form id='Formulario' action=''><input type='hidden' name='_method' value='DELETE'> <a id='borrarFalta'onclick='deleteFalta(),cambiarHtml()'><img src='img/boton.png' width='30px'></a></form></th></tr>" );
   }
     $.each( data, function( key, val ) {
-    items.push( "<tr id='" + key + "' class='list-group-item' ><td><b> "+key +":</b></td> <td><input id='"+key+cont+"'type='text' size='24%'name='"+key+"' value='"+val+"' disabled></td></tr>" );
+    items.push( "<tr id='" + key + "' class='list-group-item' ><td><b> "+key +":</b></td> <td colspan='2'><input id='"+key+cont+"'type='text' size='24%'name='"+key+"' value='"+val+"' disabled></td></tr>" );
     if(key=="Eliminada"){
       Eliminada=val;
     }
