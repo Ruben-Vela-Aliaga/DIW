@@ -12,7 +12,15 @@ $.getJSON( "faltas/"+auxId, function( data ) {
 
         if(data.hasOwnProperty(key))
         $('input[name='+key+']').val(val);
-
+     
+       
+       var checkID= $('input[name='+key+']').attr('id');
+       if(checkID=="CheckedD") {
+         console.log(checkID);
+         $('input[id='+checkID+']').prop("checked",true);
+          Mostrar(checkID,"is"+checkID );
+        
+        }
         if(data.hasOwnProperty(key))
         $('textarea[name='+key+']').val(val);
 
@@ -68,7 +76,7 @@ function detectarRadioLeve(){
  
 function regargar() {
 
-window.location="http://localhost:3000/menu.html";
+window.location="menu.html";
   //window.location.reload(true);
 
 }

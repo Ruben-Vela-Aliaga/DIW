@@ -50,12 +50,13 @@ function Editar(img){
    //listo los hijos que tiene  el segundo td que es donde esta el enlace
   var hijoPadre=HijoAbuelo[0].childNodes;
  //cojo el enlace
+
  var Enlace=hijoPadre[1].href;
- 
-
+ var clave=Enlace.split("=")[1];
  //luego pongo dicha ruta en el enlace donde esta el evento onlclick
- document.getElementById("Editar"+abuelo.id).href=Enlace;
-
+ document.getElementById("Editar"+abuelo.id).href="convivencia.html?id="+clave;
+ 
+ 
 }
 function menu(){
 

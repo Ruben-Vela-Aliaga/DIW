@@ -56,10 +56,9 @@ function Editar(img){
  //cojo el enlace
 
  var Enlace=hijoPadre[1].href;
- 
-
+ var clave=Enlace.split("=")[1];
  //luego pongo dicha ruta en el enlace donde esta el evento onlclick
- document.getElementById("Editar"+abuelo.id).href=Enlace;
+ document.getElementById("Editar"+abuelo.id).href="convivencia.html?id="+clave;
 
 }
 
