@@ -1,5 +1,6 @@
 var Delete="<span class='badge badge-danger'>Eliminada</span>";
 var cabecera=false;
+var fechaHoy="";
 
 $.getJSON( "faltas/faltasLeves", function( data ) {
   var items = [];
@@ -12,10 +13,11 @@ $.getJSON( "faltas/faltasLeves", function( data ) {
     if( val.Eliminada == true){
       if(val.nombreAlumno== ""){
         val.nombreAlumno="Sin nombre";
-        
+      //fechaHoy= fechaActual();
       items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
     
     }else{
+     //fechaHoy= fechaActual();
       items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
     }
     }else{
@@ -43,8 +45,12 @@ $.getJSON( "faltas/faltasLeves", function( data ) {
   }).appendTo( "#divLista" );
 });
 
-
-
+/*
+function fechaActual(){
+  var f = new Date();
+var fechaAct=f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+return fechaAct;
+}*/
 function menu(){
 
   if( document.getElementById("menuNavegacion").style.display=="block"){

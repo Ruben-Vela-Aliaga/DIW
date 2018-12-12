@@ -49,10 +49,10 @@ exports.create = (req, res) => {
     TipificacionG:req.body.TipificacionG,
     TipificacionH:req.body.TipificacionH,
     TipificacionI:req.body.TipificacionI,
-    TipificacionJ:req.body.TipificacionJ,
-    TipificacionK:req.body.TipificacionK,
-    TipificacionL:req.body.TipificacionL,
-    TipificacionM:req.body.TipificacionM,
+    TipificacionJ:req.body.TipificacNOTionJ,
+    TipificacionK:req.body.TipificacNOTionK,
+    TipificacionL:req.body.TipificacNOTionL,
+    TipificacionM:req.body.TipificacNOTionM,
     TipificacionN:req.body.TipificacionN,
     TipificacionÑ:req.body.TipificacionÑ,
     TipificacionO:req.body.TipificacionO,
@@ -77,6 +77,16 @@ exports.create = (req, res) => {
     Tipificacion1Ñ:req.body.Tipificacion1Ñ,
     Tipificacion1O:req.body.Tipificacion1O,
     Tipificacion1P:req.body.Tipificacion1P,
+    Lunes:req.body.Lunes,
+    Martes:req.body.Martes,
+    Miercoles:req.body.Miercoles,
+    Jueves:req.body.Jueves,
+    Viernes:req.body.Viernes,
+    Lunes1:req.body.Lunes1,
+    Martes1:req.body.Martes1,
+    Miercoles1:req.body.Miercoles1,
+    Jueves1:req.body.Jueves1,
+    Viernes1:req.body.Viernes1,
     Eliminada:false,
     FechaEliminacion:"",
     })
@@ -170,6 +180,8 @@ exports.findOne = (req, res) => {
 
 // Actualizar un investigador
 exports.update = (req, res) => {
+    console.log(" * Actulizando "+req.params.faltasId);
+    console.log(JSON.stringify(req.body));
     // Validate Request
     if (!req.body) {
         return res.status(400).send({
@@ -178,7 +190,7 @@ exports.update = (req, res) => {
     }
 
     // Find note and update it with the request body
-    Faltas.findByIdAndUpdate(req.params.faltasId, {
+    Faltas.findOneAndUpdate(req.params.faltasId, {
         nombreAlumno:req.body.nombreAlumno,
         grupoAlumno:req.body.grupoAlumno,
         nombreProfessor:req.body.nombreProfessor,
@@ -218,6 +230,7 @@ exports.update = (req, res) => {
         TipificacionQ:req.body.TipificacionQ,
         TipificacionR:req.body.TipificacionR,
         TipificacionS:req.body.TipificacionS,
+
        
     }, { new: true })
         .then(faltas => {
@@ -226,14 +239,16 @@ exports.update = (req, res) => {
                     message: "Investigador not found with id " + req.params.faltasId
                 });
             }
-            res.send(faltas);
+            res.redirect("../index.html");
         }).catch(err => {
             if (err.kind === 'ObjectId') {
                 return res.status(404).send({
                     message: "Investigador not found with id " + req.params.faltasId
                 });
             }
+            console.log(err);
             return res.status(500).send({
+        
                 message: "Error updating Investigador with id " + req.params.faltasId
             });
         });
@@ -256,6 +271,7 @@ exports.deleteOriginal = (req, res) => {
                 });
             }
             return res.status(500).send({
+    
                 message: "No podemos matar a ese Investigador with id " + req.params.faltasId
             });
         });

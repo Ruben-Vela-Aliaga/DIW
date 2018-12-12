@@ -4,10 +4,9 @@ var Grave;
 var Eliminada;
 var cont=0;
 var cabecera=false;
-
-
+console.log(auxId);
+if(auxId!="undefined"){
 $.getJSON( "faltas/"+auxId, function( data ) {
-    console.log(data);
     $.each( data, function( key, val ) {
 
         if(data.hasOwnProperty(key))
@@ -15,27 +14,45 @@ $.getJSON( "faltas/"+auxId, function( data ) {
      
        
        var checkID= $('input[name='+key+']').attr('id');
-       if(checkID=="CheckedD") {
-         console.log(checkID);
+       console.log(key);
+       if(val == "on"){
+         if(checkID== "CheckedD"){
+
          $('input[id='+checkID+']').prop("checked",true);
-          Mostrar(checkID,"is"+checkID );
-        
+          Mostrar(checkID,"is"+checkID);
+        }else if(checkID== "CheckedE"){
+     
+          $('input[id='+checkID+']').prop("checked",true);
+           Mostrar(checkID,"is"+checkID);
+      }else if(checkID== "CheckedF"){
+        $('input[id='+checkID+']').prop("checked",true);
+         Mostrar(checkID,"is"+checkID);
+      }else{
+        $('input[id='+checkID+']').prop("checked",true);
+      }
         }
+      
         if(data.hasOwnProperty(key))
         $('textarea[name='+key+']').val(val);
 
   });
 
+  /*
+  * Cambiar el action del formulario
+  */
+
+ $('#Formconvivencia').attr('action', 'faltas/'+auxId);
+
+
 });
-
-
+}
+/*
 function onSubmit(form) {
 
   var data = JSON.stringify($(form).serializeArray()); //  <-----------
-  console.log(data);
   return false; //don't submit
 
-}
+}*/
 function detectarRadioGrave(){
 
   if(document.getElementById("DocumentoGrave").checked){
@@ -44,25 +61,6 @@ function detectarRadioGrave(){
     document.getElementById("DocumentoLeve").name="tipoDocumento";
   }
  
-
-  /*
-  if(document.getElementById("DocumentoLeve").checked){
-    document.getElementById("DocumentoGrave").checked=0;
-    document.getElementById("DocumentoLeve").name="documentoLeve";
-  }else{
-    if( document.getElementById("DocumentoLeve").name=="documentoLeve"){
-      document.getElementById("DocumentoLeve").checked=0;
-      document.getElementById("DocumentoLeve").name="tipoDocumento";
-      document.getElementById("DocumentoGrave").name="documentoGrave";
-    }else{
-      
-      document.getElementById("DocumentoLeve").name="tipoDocumento";
-      document.getElementById("DocumentoGrave").name="documentoGrave";
-    }
-
-    
-  }
-  */
 }
 
 function detectarRadioLeve(){
