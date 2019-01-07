@@ -41,10 +41,13 @@ $.getJSON( "faltas/"+auxId, function( data ) {
   * Cambiar el action del formulario
   */
 
- $('#Formconvivencia').attr('action', 'faltas/'+auxId);
 
 
 });
+
+document.addEventListener("DOMContentLoaded",cargar);
+//console.log(document.getElementById("Formconvivencia"));
+
 }
 /*
 function onSubmit(form) {
@@ -138,4 +141,7 @@ function menu(){
   
 }
 
+function cargar(){
+  document.getElementById("Formconvivencia").action="faltas/"+auxId;
+}
 
