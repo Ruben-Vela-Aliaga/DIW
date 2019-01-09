@@ -1,0 +1,36 @@
+.alumno{
+    border:1px solid purple;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+line-height: 100px;
+  text-align: center;
+
+}
+@media (min-width: 500px) and (max-width: 800px) {
+#amonestados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+}
+}
+@media (min-width: 800px) {
+    #amonestados{
+        display: flex;
+        justify-content: flex-end;
+     
+    }
+    @media (max-width: 500px){
+        #amonestados{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.orden{
+order: -1;
+}
+.quitarOrden{
+order: 0;
+}
+}
