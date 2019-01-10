@@ -5,7 +5,8 @@ var Eliminada;
 var cont=0;
 var cabecera=false;
 console.log(auxId);
-if(auxId!="undefined"){
+
+if(auxId!=null){
 $.getJSON( "faltas/"+auxId, function( data ) {
     $.each( data, function( key, val ) {
 
@@ -44,8 +45,8 @@ $.getJSON( "faltas/"+auxId, function( data ) {
 
 
 });
+document.addEventListener("DOMContentLoaded",cargar)
 
-document.addEventListener("DOMContentLoaded",cargar);
 //console.log(document.getElementById("Formconvivencia"));
 
 }
@@ -140,8 +141,9 @@ function menu(){
 
   
 }
-
 function cargar(){
   document.getElementById("Formconvivencia").action="faltas/"+auxId;
 }
+
+
 

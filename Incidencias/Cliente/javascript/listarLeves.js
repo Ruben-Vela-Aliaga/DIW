@@ -14,18 +14,18 @@ $.getJSON( "faltas/faltasLeves", function( data ) {
       if(val.nombreAlumno== ""){
         val.nombreAlumno="Sin nombre";
       //fechaHoy= fechaActual();
-      items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
+      items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img  id='"+val._id+"' src='../img/editar.png'></a> "+val._id+"</td> </tr>" );
     
     }else{
      //fechaHoy= fechaActual();
-      items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
+      items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td>"+Delete+"</td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img id='"+val._id+"'src='../img/editar.png'></a>"+val._id+"</td> </tr>" );
     }
     }else{
       if(val.nombreAlumno== ""){
         val.nombreAlumno="Sin nombre";
-      items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td></td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
+      items.push( "<tr id='"+key+"'> id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td></td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img  id='"+val._id+"' src='../img/editar.png'></a>"+val._id+"</td> </tr>" );
     }else{
-      items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td></td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img src='../img/editar.png'></a></td> </tr>" );
+      items.push( "<tr id='"+key+"'>id='" + key + "' class='list-group-item' ><td> <a href='detalles.html?id="+val._id+"'>" + val.nombreAlumno + "</a></td><td>"+val.nombreProfessor+"</td><td>"+fecha+"</td><td></td><td><a  id='Editar"+key+"' onclick='Editar(this)'><img  id='"+val._id+"' src='../img/editar.png'></a>"+val._id+"</td> </tr>" );
     }
   }
     
