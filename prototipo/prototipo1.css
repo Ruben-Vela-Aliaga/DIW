@@ -1,0 +1,60 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:  60px 50px 350px 150px 50px;
+    grid-template-areas: "h h h h h h h h h h h h "
+                        " m m c c c c c c c c r r "
+                        " m m c c c c c c c c r r "
+                        " m m c c c c c c c c b b "
+                        " f f f f f f f f f f f f ";
+                        grid-gap: 1rem;
+}
+body{
+    background-color: darkcyan;
+}
+.head{
+grid-area: h;
+text-align: center;
+background-color: gold;
+}
+.menu{
+    grid-area: m;
+ 
+    
+}
+.contenido{
+    grid-area: c;
+text-align: center;
+  
+}
+.carro{
+    grid-area: r;
+    background-color: burlywood;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.btnImprimir{
+    grid-area: b;
+
+}
+.footer{
+    grid-area: f;
+    text-align: center;
+    background-color: gray;
+}
+.btnMenu{
+    width: 100%;
+    height:50% ;
+    font-size: 35px;
+    background-color: darkseagreen;
+}
+.galleta{
+    border-radius: 100px;
+}
+.btncarro{
+    height: 100%;
+    width: 100%;
+    background-color: darkgreen;
+    font-size: 28px;
+}
